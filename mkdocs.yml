@@ -9,6 +9,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  logo: images/malmo-stad-logo-colour.png
+  favicon: images/malmo-stad-logo.png
   palette:
     - scheme: default
       primary: green
