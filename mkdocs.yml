@@ -1,0 +1,135 @@
+site_name: HVOF Systemarkitektur
+site_description: Systemarkitektur för Hälsa, Vård och Omsorgsförvaltningen
+site_author: HVOF IT
+site_url: https://hvof-systemarkitektur.github.io
+
+repo_name: HVOF-system
+repo_url: https://github.com/abbemalmo99/HVOF-system
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: images/malmo-stad-logo.png
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mermaid2:
+      arguments:
+        theme: default
+        themeVariables:
+          fontSize: '22px'
+          fontFamily: 'Arial, sans-serif'
+          primaryColor: '#01351C'
+          primaryTextColor: '#ffffff'
+          primaryBorderColor: '#01351C'
+          lineColor: '#01351C'
+          secondaryColor: '#FFC107'
+          tertiaryColor: '#4CAF50'
+          background: '#FAFAFA'
+          mainBkgColor: '#FFFFFF'
+          textColor: '#212121'
+          clusterBkg: '#E8F5E9'
+          clusterBorder: '#01351C'
+        flowchart:
+          nodeSpacing: 60
+          rankSpacing: 80
+          curve: basis
+          padding: 20
+          htmlLabels: true
+          useMaxWidth: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Hem: index.md
+  - Översikt:
+    - Introduktion: overview/introduction.md
+    - Verksamhetsbeskrivning: overview/verksamhetsbeskrivning.md
+    - Organisation: overview/organisation.md
+    - Ordlista: overview/glossary.md
+    - Arkitekturprinciper: overview/architecture-principles.md
+    - Hur man arbetar: overview/how-to-work.md
+    - Design Style Guide: overview/design-style-guide.md
+  - Processer:
+    - Översikt: processes/core-processes/overview.md
+    - Larmhantering: processes/core-processes/case-management.md
+    - Vårdhantering: processes/core-processes/follow-up.md
+    - Personalhantering: processes/core-processes/onboarding.md
+  - System:
+    - Systemlandskap: systems/system-landscape.md
+    - Systemlandskap RFI-fokus: systems/system-landscape-rfi.md
+    - Integrationer: systems/integrations.md
+    - Masterdata: systems/masterdata.md
+    - Centrala System: systems/02-system/centrala-system/README.md
+    - Molntjänster: systems/02-system/molntjanster/README.md
+    - Applikationer: systems/02-system/applikationer/README.md
+    - Tjänster: systems/02-system/tjanster/README.md
+    - Övriga System: systems/02-system/ovriga-system/README.md
+  - Diagram:
+    - Arkitektur:
+      - Systemlandskap RFI: diagrams/architecture/system-landscape-rfi.md
+      - Kritikalitet: diagrams/architecture/kritikalitet.md
+      - Autentisering: diagrams/architecture/autentisering.md
+      - Integrationer: diagrams/architecture/integration-detailed.md
+    - Process:
+      - Larmcentral: diagrams/process/larmcentral.md
+      - Vård & Omsorg: diagrams/process/vard-omsorg.md
+    - Dataflöden:
+      - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
+  - Analyser:
+    - Gap-analys: analyses/gap-analysis.md
+    - Pain Points: analyses/pain-points.md
+    - Riskanalys: analyses/risk-analysis.md
+  - RFI/RFP:
+    - RFI-material: rfi-rfp/rfi-material.md
+    - RFI-översikt: rfi-rfp/05-rfi/rfi-overview.md
+    - Kravlista: rfi-rfp/requirements-list.md
+    - Frågor till leverantörer: rfi-rfp/supplier-questions.md
+    - Utvärderingskriterier: rfi-rfp/evaluation-criteria.md
+  - Om:
+    - Dokumentation: about/documentation.md
+    - Kontakt: about/contact.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/abbemalmo99/HVOF-system
