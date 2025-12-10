@@ -1,15 +1,14 @@
 site_name: HVOF Systemarkitektur
 site_description: Systemarkitektur för Hälsa, Vård och Omsorgsförvaltningen
 site_author: HVOF IT
-site_url: https://hvof-systemarkitektur.github.io
+site_url: https://malmostad.github.io/Verksamhetssystem-RFI/
 
-repo_name: HVOF-system
-repo_url: https://github.com/abbemalmo99/HVOF-system
+repo_name: Verksamhetssystem-RFI
+repo_url: https://github.com/malmostad/Verksamhetssystem-RFI
 edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: images/malmo-stad-logo.png
   palette:
     - scheme: default
       primary: green
@@ -23,7 +22,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  custom_dir: docs/overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -38,30 +36,6 @@ theme:
 
 plugins:
   - search
-  - mermaid2:
-      arguments:
-        theme: default
-        themeVariables:
-          fontSize: '22px'
-          fontFamily: 'Arial, sans-serif'
-          primaryColor: '#01351C'
-          primaryTextColor: '#ffffff'
-          primaryBorderColor: '#01351C'
-          lineColor: '#01351C'
-          secondaryColor: '#FFC107'
-          tertiaryColor: '#4CAF50'
-          background: '#FAFAFA'
-          mainBkgColor: '#FFFFFF'
-          textColor: '#212121'
-          clusterBkg: '#E8F5E9'
-          clusterBorder: '#01351C'
-        flowchart:
-          nodeSpacing: 60
-          rankSpacing: 80
-          curve: basis
-          padding: 20
-          htmlLabels: true
-          useMaxWidth: true
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -115,6 +89,9 @@ nav:
       - Vård & Omsorg: diagrams/process/vard-omsorg.md
     - Dataflöden:
       - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
+    - Övriga:
+      - System Overview: diagrams/system-overview.md
+      - Integration Overview: diagrams/integration-overview.md
   - Analyser:
     - Gap-analys: analyses/gap-analysis.md
     - Pain Points: analyses/pain-points.md
@@ -122,9 +99,12 @@ nav:
   - RFI/RFP:
     - RFI-material: rfi-rfp/rfi-material.md
     - RFI-översikt: rfi-rfp/05-rfi/rfi-overview.md
+    - RFI-sammanfattning: rfi-rfp/05-rfi/rfi-summary.md
     - Kravlista: rfi-rfp/requirements-list.md
     - Frågor till leverantörer: rfi-rfp/supplier-questions.md
     - Utvärderingskriterier: rfi-rfp/evaluation-criteria.md
+  - Statistik:
+    - Översikt: statistics/overview.md
   - Om:
     - Dokumentation: about/documentation.md
     - Kontakt: about/contact.md
@@ -132,4 +112,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/abbemalmo99/HVOF-system
+      link: https://github.com/malmostad/Verksamhetssystem-RFI

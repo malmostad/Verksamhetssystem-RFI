@@ -8,16 +8,24 @@ env/
 venv/
 ENV/
 .venv
+pip-log.txt
+pip-delete-this-directory.txt
 
 # MkDocs
 site/
 .mkdocs_cache/
-
-# Generated files (keep JSON as source of truth)
-systems_data_extended.py
+.cache/
 
 # IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 .idea/
 *.swp
 *.swo

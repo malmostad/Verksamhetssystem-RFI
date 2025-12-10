@@ -1,0 +1,85 @@
+# Koll - Qlikview
+
+## Översikt
+
+**Typ:** System  
+**Kategori:** Central Systems  
+**Ägare:** Centralt system  
+**Organisation:** Ej angivet  
+**Avdelning:** Malmö stad  
+**Status:** Active  
+**Kritikalitet:** Medium
+
+## Beskrivning
+
+Business intelligence Ekonomi
+
+## Kontaktpersoner
+
+- Ej angivet
+
+## Autentisering
+
+Användarnamn och lösenord
+
+## Kostnad
+
+| Typ | Belopp | Valuta |
+|-----|--------|--------|
+| **Årlig kostnad** | 0 SEK | SEK |
+| **Licenskostnad** | 0 SEK | SEK |
+| **Supportkostnad** | 0 SEK | SEK |
+| **Totalt** | 0 SEK | SEK |
+
+*Kompletteras med faktiska kostnader*
+
+## Användare
+
+- **Totalt antal användare:** 0
+- **Användargrupper:** Ej angivet
+- **Roller:** Ej angivet
+
+*Kompletteras med faktiska användarantal*
+
+## Teknisk Information
+
+| Fält | Värde |
+|------|-------|
+| **Deployment** | Ej angivet |
+| **Leverantör** | Ej angivet |
+| **Version** | Ej angivet |
+| **Databas** | Ej angivet |
+
+### API:er
+
+- Ej angivet
+
+### Integrationer
+
+- Ej angivet
+
+## Integrationer
+
+*Kompletteras med faktiska integrationer*
+
+## Användningsområden
+
+*Kompletteras med faktiska användningsområden*
+
+## Volymer
+
+*Kompletteras med faktiska volymer*
+
+## Kritikalitet
+
+**Nivå:** Medium
+
+*Kompletteras med faktisk kritikalitet och nedtidspåverkan*
+
+## Utmaningar och Förbättringsbehov
+
+*Kompletteras med faktiska utmaningar*
+
+## Framtida Planer
+
+*Kompletteras med framtida planer*
