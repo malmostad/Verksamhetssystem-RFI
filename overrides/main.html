@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <style>
+    :root {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    [data-md-color-scheme="default"] {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    [data-md-color-scheme="slate"] {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    /* Logo styling for white logo on dark background */
+    .md-header__inner .md-header__button img {
+      filter: brightness(0) invert(1);
+    }
+    [data-md-color-scheme="slate"] .md-header__inner .md-header__button img {
+      filter: none;
+    }
+  </style>
+{% endblock %}
+
