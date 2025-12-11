@@ -1,53 +1,74 @@
-# HVOF Systemarkitektur
+# RFI - Verksamhetssystemet för HVOF
 
 ![Malmö stad logotyp](images/malmo-stad-logo-colour.png){ width="200" }
 
-Välkommen till systemarkitekturdokumentationen för **Hälsa, Vård och Omsorgsförvaltningen (HVOF)**.
+Välkommen till **Request for Information (RFI)** för **Hälsa, Vård och Omsorgsförvaltningen (HVOF)** systemarkitektur.
 
-## 🎯 Syfte
+## 🎯 Syfte med denna RFI
 
-Denna dokumentation ger en komplett översikt av HVOFs systemlandskap för:
-- **Ledning** - Strategisk översikt och beslutsunderlag
-- **Verksamhet** - Förståelse av system och processer
-- **IT** - Teknisk dokumentation och integrationer
-- **Leverantörer** - Underlag för RFI och upphandling
+Detta dokument är en föresprågan om information från leverantörer angående möjligheten att tillhandahålla ett integrerat verksamhetssystem för HVOF. Systemet ska stödja alla verksamhetsområden inom Malmö stads HVOF från larmcentral till välfärdstjänster.
 
-## 📊 Snabböversikt
+**Vi söker:** Verksamhetssystem som kan ersätta dagens Lifecare-Procapita och integrera med befintlig IT-miljö.
 
-- **Totalt antal system:** 57
-- **Verksamhetsområden:** 5 (Larmcentral, Vård & Omsorg, Personal & HR, Ekonomi, IT)
-- **Masterdata-system:** 5 (HRutan, Lifecare-Procapita, Ekot, Interview/ISM, MSM)
-- **Kritiska system:** 4 (24/7 drift)
+## 📋 RFI-dokumentation
 
-## 🗺️ Navigering
+### Huvuddokument
+- **[RFI-Material](rfi-rfp/rfi-material.md)** - Komplett RFI med systemöversikt, kritiska krav och integrationer
+- **[Systemlandskap](systems/system-landscape-rfi.md)** - Visuell överblick av systemet och dess kopplingar
+- **[Kravspecifikation](rfi-rfp/requirements-list.md)** - Detaljerade funktionella och tekniska krav
 
-### För Ledning
-- [Verksamhetsbeskrivning](overview/verksamhetsbeskrivning.md)
-- [Organisationsstruktur](overview/organisation.md)
-- [Systemkarta](systems/system-landscape.md)
-- [Kritikalitet](diagrams/architecture/kritikalitet.md)
+### Verksamhet & Processer
+- **[Verksamhetsbeskrivning](overview/verksamhetsbeskrivning.md)** - Beskrivning av HVOF:s verksamhet
+- **[Processer](processes/core-processes/overview.md)** - Kärnprocesser: Larmhantering, Vårdhantering, Personalhantering
+- **[Organisationsstruktur](overview/organisation.md)** - HVOF:s organisation och roller
 
-### För Verksamhet
-- [Verksamhetsområden](diagrams/03-verksamhetsomrade-larmcentral.md)
-- [Processer](diagrams/process/larmcentral.md)
-- [Systemdokumentation](02-system/)
+### Teknik & Integration
+- **[Integrationer](systems/integrations.md)** - Alla systemkopplingar och datautväxlingar
+- **[Masterdata-flöde](diagrams/data-flows/masterdata-flow.md)** - Beskrivning av kritiska dataflöden
+- **[Autentisering & Säkerhet](diagrams/architecture/autentisering.md)** - Säkerhetskrav och autentiseringsmetoder
 
-### För IT
-- [Integrationskarta](systems/integrations.md)
-- [Masterdata-flöde](diagrams/data-flows/masterdata-flow.md)
-- [Teknisk dokumentation](systems/)
+### Frågor & Utvärdering
+- **[Frågor till leverantörer](rfi-rfp/supplier-questions.md)** - Specifika frågor om systemets kapacitet
+- **[Utvärderingskriterier](rfi-rfp/evaluation-criteria.md)** - Hur svar utvärderas
 
-### För Leverantörer
-- [RFI-material](rfi-rfp/rfi-material.md)
-- [Systemlandskap RFI-fokus](systems/system-landscape-rfi.md)
-- [Kravlista](rfi-rfp/requirements-list.md)
+## 🏥 Verksamhetsområden
 
-## 🔍 Sök och Filtrera
+HVOF ansvarar för fem huvudsakliga verksamhetsområden:
 
-Använd sökfunktionen (tryck `S` eller klicka på sökikonen) för att hitta:
-- System efter namn
-- Kontaktpersoner
-- Integrationer
+1. **Larmcentral** - Mottagning och dispatch av larmsamtal
+2. **Vård & Omsorg** - Socialtjänst, hemtjänst, särskilt boende, LSS
+3. **Kvalitet & Säkerhet** - Avvikelsehantering, rapportering
+4. **Personal & HR** - Bemanning, schemaläggning, personaladministration
+5. **Ekonomi & Fakturering** - Ekonomistyrning, debitering, rapporter
+
+## 📊 Systemöversikt
+
+**Dagens system:**
+- **Huvudsystem:** Lifecare-Procapita (verksamhet, journal, dokumentation)
+- **Stödsystem:** 56 integrerade system (från små specialistlösningar till stora plattformar)
+- **Criticals:** 4 system (24/7 drift)
+- **Användargrupper:** ~500 användare
+
+## ⏰ RFI-process
+
+1. **Information** - Du läser denna RFI
+2. **Frågor** - Skicka frågor via e-post eller möte
+3. **Svar & Demo** - Leverantörer presenterar sina lösningar
+4. **Analys** - Vi utvärderar baserat på kriterierna
+5. **RFP** - Utvalda leverantörer bjuds in till formell upphandling (RFP)
+
+## 📞 Kontakt
+
+För frågor eller mer information om denna RFI, kontakta:
+
+- **Projektledning:** [Se Kontakt](about/contact.md)
+- **Tekniska frågor:** Se kontaktpersoner i respektive systemdokumentation
+
+---
+
+**Datum:** December 2025  
+**Giltig tom:** Framgår av RFI-ritningsmeddelandet  
+**Malmö stad - Hälsa, Vård och Omsorgsförvaltningen**
 - Teknisk information
 
 ## 📈 Systemöversikt

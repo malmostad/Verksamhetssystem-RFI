@@ -1,5 +1,5 @@
-site_name: HVOF Systemarkitektur
-site_description: Systemarkitektur för Hälsa, Vård och Omsorgsförvaltningen
+site_name: RFI - Verksamhetssystemet för HVOF
+site_description: Request for Information för Hälsa, Vård och Omsorgsförvaltningens verksamhetssystem
 site_author: HVOF IT
 site_url: https://malmostad.github.io/Verksamhetssystem-RFI/
 
@@ -57,58 +57,45 @@ markdown_extensions:
 
 nav:
   - Hem: index.md
-  - Översikt:
-    - Introduktion: overview/introduction.md
+  - RFI-Material:
+    - RFI-dokumentation: rfi-rfp/rfi-material.md
+    - Systemlandskap: systems/system-landscape-rfi.md
+    - Kravspecifikation: rfi-rfp/requirements-list.md
+    - Frågor till leverantörer: rfi-rfp/supplier-questions.md
+    - Utvärderingskriterier: rfi-rfp/evaluation-criteria.md
+  - Verksamhet:
     - Verksamhetsbeskrivning: overview/verksamhetsbeskrivning.md
-    - Organisation: overview/organisation.md
-    - Ordlista: overview/glossary.md
-    - Arkitekturprinciper: overview/architecture-principles.md
-    - Hur man arbetar: overview/how-to-work.md
-    - Design Style Guide: overview/design-style-guide.md
-  - Processer:
-    - Översikt: processes/core-processes/overview.md
-    - Larmhantering: processes/core-processes/case-management.md
-    - Vårdhantering: processes/core-processes/follow-up.md
-    - Personalhantering: processes/core-processes/onboarding.md
-  - System:
-    - Systemlandskap: systems/system-landscape.md
-    - Systemlandskap RFI-fokus: systems/system-landscape-rfi.md
+    - Organisationsstruktur: overview/organisation.md
+    - Kärnprocesser:
+      - Processer - Översikt: processes/core-processes/overview.md
+      - Larmhantering: processes/core-processes/case-management.md
+      - Vårdhantering: processes/core-processes/follow-up.md
+      - Personalhantering: processes/core-processes/onboarding.md
+  - Teknik & Integration:
+    - Systemöversikt: systems/system-landscape.md
+    - Systemkatalog: systems/systemkatalog.md
+    - Digitaliseringsstrategi: systems/digitaliseringsstrategi.md
     - Integrationer: systems/integrations.md
     - Masterdata: systems/masterdata.md
+    - Arkitekturdiagram:
+      - Kritikalitet: diagrams/architecture/kritikalitet.md
+      - Autentisering & Säkerhet: diagrams/architecture/autentisering.md
+      - Integrationsöversikt: diagrams/architecture/integration-detailed.md
+    - Dataflöden:
+      - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
+  - System (Kategori):
     - Centrala System: systems/02-system/centrala-system/README.md
     - Molntjänster: systems/02-system/molntjanster/README.md
     - Applikationer: systems/02-system/applikationer/README.md
     - Tjänster: systems/02-system/tjanster/README.md
     - Övriga System: systems/02-system/ovriga-system/README.md
-  - Diagram:
-    - Arkitektur:
-      - Systemlandskap RFI: diagrams/architecture/system-landscape-rfi.md
-      - Kritikalitet: diagrams/architecture/kritikalitet.md
-      - Autentisering: diagrams/architecture/autentisering.md
-      - Integrationer: diagrams/architecture/integration-detailed.md
-    - Process:
-      - Larmcentral: diagrams/process/larmcentral.md
-      - Vård & Omsorg: diagrams/process/vard-omsorg.md
-    - Dataflöden:
-      - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
-    - Övriga:
-      - System Overview: diagrams/system-overview.md
-      - Integration Overview: diagrams/integration-overview.md
   - Analyser:
     - Gap-analys: analyses/gap-analysis.md
     - Pain Points: analyses/pain-points.md
     - Riskanalys: analyses/risk-analysis.md
-  - RFI/RFP:
-    - RFI-material: rfi-rfp/rfi-material.md
-    - RFI-översikt: rfi-rfp/05-rfi/rfi-overview.md
-    - RFI-sammanfattning: rfi-rfp/05-rfi/rfi-summary.md
-    - Kravlista: rfi-rfp/requirements-list.md
-    - Frågor till leverantörer: rfi-rfp/supplier-questions.md
-    - Utvärderingskriterier: rfi-rfp/evaluation-criteria.md
-  - Statistik:
-    - Översikt: statistics/overview.md
-  - Om:
-    - Dokumentation: about/documentation.md
+  - Referens:
+    - Ordlista: overview/glossary.md
+    - Arkitekturprinciper: overview/architecture-principles.md
     - Kontakt: about/contact.md
 
 extra:
