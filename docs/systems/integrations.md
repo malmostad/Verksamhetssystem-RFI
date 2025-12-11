@@ -1,8 +1,9 @@
-# Integrationskarta - Nuläge
+# 🔗 Integrationskarta - Nuläge
 
-## Översikt
+## 📌 Vad är detta?
 
-Denna karta visar huvudsakliga integrationer mellan system i HVOFs systemlandskap.
+!!! note "Definition"
+    Denna karta visar huvudsakliga integrationer mellan system i HVOFs systemlandskap och identifierar kritiska dataflöden, integrationsproblem och framtida behov.
 
 ## Integrationskarta - Visuell översikt
 
@@ -67,103 +68,108 @@ graph LR
     Ekot -->|Ekonomidata| Koll
 ```
 
-## Integrationstyper
+## 📊 Integrationstyper
 
-### 1. API-integrationer (REST/SOAP)
-- **Freja eID** → HRutan, Lifecare-Procapita
-- **NPÖ** ↔ Lifecare-Procapita
-- **Pascal** ↔ Lifecare-Procapita
-- **KomKat** ↔ Externa system
+| Typ | Exempel | Fördelar | Utmaningar |
+|-----|---------|----------|-----------|
+| 🔌 **API (REST/SOAP)** | Freja eID, NPÖ, Pascal | Realtid, standardiserad | Kräver API-stöd |
+| 📁 **Filöverföring (Batch)** | Ekot→Koll, HRutan→Medvind | Enkel, pålitlig | Långsam, felkänslig |
+| 🗄️ **Direkta databaslänkar** | ISM→CMP, Kuben→Lifecare | Snabb | Säkerhet, beroende |
+| 📨 **Meddelandeköer** | 3CX→ISM, Milestone→ISM | Asynkron, robust | Komplex |
 
-### 2. Filöverföringar (Batch)
-- **Ekot** → Koll-Qlikview (ekonomidata)
-- **HRutan** → Medvind (personaldata)
-- **Lifecare-Procapita** → Phoniro Care (tidsdata)
+---
 
-### 3. Direkta databaslänkar
-- **Interview/ISM** → CMP (larmdata)
-- **Kuben** → Lifecare-Procapita (tidsplanering)
+## 🚨 Kritiska integrationer
 
-### 4. Meddelandeköer
-- **3CX** → Interview/ISM (samtal)
-- **Milestone** → Interview/ISM (alarm)
+### 🚨 Larmcentral
 
-## Kritiska Integrationer
+| Från | Till | Typ | Data | Kritikalitet | Status |
+|------|------|------|------|--------------|--------|
+| 3CX | Interview/ISM | Realtid | Samtal | 🔴 **Hög** | ✅ Aktiv |
+| Milestone | Interview/ISM | Realtid | Alarm | 🔴 **Hög** | ✅ Aktiv |
+| ISM | CMP | API/Batch | Larmdata | 🔴 **Hög** | ✅ Aktiv |
+| ISM | Guardtools | API | Aviseringar | 🟡 **Medel** | ✅ Aktiv |
 
-### Larmcentral
-1. **3CX → Interview/ISM**
-   - Typ: Realtid
-   - Data: Inkommande samtal
-   - Kritikalitet: Hög
+<div style="background-color: #FFEBEE; border-left: 4px solid #DC3545; padding: 12px; margin: 12px 0;">
+<strong>🚨 Kritisk:</strong> Dessa integrationer är livskritiska för larmhantering. Måste ha noll-downtime-migrering vid systembyte.
+</div>
 
-2. **Interview/ISM → CMP**
-   - Typ: API/Batch
-   - Data: Larmdata, trygghetslarm
-   - Kritikalitet: Hög
+### 🏥 Vård och Omsorg
 
-3. **Interview/ISM → Guardtools**
-   - Typ: API
-   - Data: Aviseringar, larmorder
-   - Kritikalitet: Medel
+| Från | Till | Typ | Data | Kritikalitet | Status |
+|------|------|------|------|--------------|--------|
+| Lifecare | NPÖ | API | Patientjournal | 🔴 **Hög** | ✅ Aktiv |
+| Lifecare | Pascal | API | Läkemedel | 🔴 **Hög** | ✅ Aktiv |
+| Lifecare | MCSS | API | Signering | 🟡 **Medel** | ✅ Aktiv |
+| Kuben | Lifecare | API/DB | Tidsplanering | 🟡 **Medel** | ⚠️ Batch |
 
-### Vård och Omsorg
-1. **Lifecare-Procapita ↔ NPÖ**
-   - Typ: API
-   - Data: Patientdata, journal
-   - Kritikalitet: Hög
+<div style="background-color: #E3F2FD; border-left: 4px solid #1976D2; padding: 12px; margin: 12px 0;">
+<strong>💡 Viktigt:</strong> Patientjournal-integrationer måste följa HL7-standard och är säkerhetskritiska
+</div>
 
-2. **Lifecare-Procapita ↔ Pascal**
-   - Typ: API
-   - Data: Läkemedelsbeställningar
-   - Kritikalitet: Hög
+### 👥 Personal & HR
 
-3. **Kuben → Lifecare-Procapita**
-   - Typ: API/Databas
-   - Data: Tidsplanering, vårdbehov
-   - Kritikalitet: Medel
+| Från | Till | Typ | Data | Kritikalitet | Status |
+|------|------|------|------|--------------|--------|
+| HRutan | Medvind | Batch/Fil | Personaldata | 🟡 **Medel** | ✅ Aktiv |
+| Visma | HRutan | API | Rekrytering | 🟢 **Låg** | ⚠️ Begränsad |
+| Freja eID | Lifecare,HRutan | SSO/API | Autentisering | 🔴 **Hög** | ✅ Aktiv |
 
-### Personal
-1. **HRutan → Medvind**
-   - Typ: Batch/Fil
-   - Data: Personaldata
-   - Kritikalitet: Medel
+### 📊 Ekonomi
 
-2. **Freja eID → HRutan, Lifecare-Procapita**
-   - Typ: SSO/API
-   - Data: Autentisering
-   - Kritikalitet: Hög
+| Från | Till | Typ | Data | Kritikalitet | Status |
+|------|------|------|------|--------------|--------|
+| Ekot | Koll-Qlikview | Batch/Fil | Ekonomidata | 🟡 **Medel** | ✅ Aktiv |
 
-## Integrationsproblem och Utmaningar
+---
 
-### Identifierade problem
-1. **Många point-to-point integrationer**
-   - Svårt att underhålla
-   - Brist på centraliserad integrationstjänst
+## ⚠️ Integrationsproblem & utmaningar
 
-2. **Blandade integrationstyper**
-   - API, Batch, Direkt databas
-   - Olika standarder och format
+| # | Problem | Påverkan | Lösning | Prioritet |
+|---|---------|----------|--------|----------|
+| 1 | 🔗 Många point-to-point integrationer | Svårunderhållet, ogenomskinligt | Centraliserad integrationstjänst | 🔴 Hög |
+| 2 | 🎯 Blandade integrationstyper | Inkonsekvens, svårt att optimera | Standardisera på API | 🔴 Hög |
+| 3 | 🏗️ Starka beroenden | Svårt att byta system | Arkitektur-refaktor | 🟡 Medel |
+| 4 | 📚 Brist på dokumentation | Oklar data, tidskrävande debug | Dokumentera alla | 🟡 Medel |
+| 5 | 📊 Ingen övervakning | Kan missa fel | Implementera monitoring | 🟡 Medel |
 
-3. **Beroenden mellan system**
-   - Svårt att byta system
-   - Kaskadeffekter vid ändringar
+!!! danger "Högsta prioritet"
+    Point-to-point integrationer är den största tekniska skulden. Vi behöver en integrationsstrategi.
 
-4. **Brist på dokumentation**
-   - Många integrationer saknar dokumentation
-   - Svårt att förstå dataströmmar
+---
 
-## Framtida Mål - Integrationer
+## 🎯 Framtida målbild - Integrationsarkitektur
 
-### Principer
-1. **API-first** - Alla integrationer via API
-2. **Standardiserade format** - JSON, HL7 FHIR för vårddata
-3. **Centraliserad integrationstjänst** - Eventuell API-gateway eller integration platform
-4. **Dokumentation** - Alla integrationer dokumenterade
-5. **Monitoring** - Övervakning av integrationer
+### Principer för framtiden
 
-### Prioriterade förbättringar
-1. Dokumentera alla befintliga integrationer
-2. Identifiera kritiska integrationer
-3. Planera för centraliserad integrationstjänst
-4. Standardisera integrationstyper
+```mermaid
+graph TB
+    API["🔌 API-First<br/>Alla system via API"]
+    Standard["⚙️ Standardiserad<br/>JSON, HL7 FHIR"]
+    Centraliserad["🚪 Centraliserad<br/>API Gateway"]
+    Monitoring["📊 Övervakad<br/>Realtids-monitoring"]
+    
+    API --> Enkel["Enkel integrationskod"]
+    Standard --> Kompatibilitet["Systemoberoende"]
+    Centraliserad --> Skalbar["Skalbar arkitektur"]
+    Monitoring --> Robust["Robust & tillförlitlig"]
+```
+
+### Migreringsväg
+
+| Fas | Tidslinje | Fokus | Effekt |
+|-----|-----------|-------|--------|
+| **1. Dokumentation** | Q1-Q2 | Mappa alla integrationer | 📚 Kunskap |
+| **2. Standardisering** | Q2-Q3 | Migrera till REST API | 🔌 Modern |
+| **3. Centralisering** | Q4+ | Implementera API-gateway | 🚪 Skalbar |
+| **4. Optimering** | År 2+ | Monitoring & optimering | 📊 Robust |
+
+---
+
+## 🔗 Läs mer
+
+- 🏗️ [Arkitekturprinciper](../overview/architecture-principles.md) - Designriktlinjer
+- 🗺️ [Systemlandskap](./system-landscape.md) - Se alla system
+- 🔴 [Pain Points](../analyses/pain-points.md) - Nuvarande problem
+- 📈 [Gap-analys](../analyses/gap-analysis.md) - Vad behöver förbättras?
 

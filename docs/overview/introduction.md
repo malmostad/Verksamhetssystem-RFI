@@ -1,53 +1,137 @@
-# Introduktion
+# 👋 Välkommen till HVOF Systemarkitektur
 
-## Välkommen till HVOF Systemarkitektur
+## 🏢 Om denna dokumentation
 
-Detta är den centrala dokumentationsplatsen för systemarkitektur, processer och systemlandskap inom Hälsa, Vård och Omsorgsförvaltningen (HVOF).
+!!! note "Central kunskapsbas"
+    Detta är den centrala dokumentationsplatsen för **systemarkitektur, processer och systemlandskap** inom Hälsa, Vård och Omsorgsförvaltningen (HVOF) i Malmö stad.
 
-## Syfte
+```mermaid
+graph TB
+    A["📚 Denna<br/>Dokumentation"] --> B["🎯 Verksamhetsbegreppande"]
+    A --> C["🔄 Systembyte-stöd"]
+    A --> D["💼 Ledningsbeslut"]
+    A --> E["🏗️ Teknisk design"]
+    
+    style A fill:#42A5F5,color:#FFF
+    style B fill:#66BB6A,color:#FFF
+    style C fill:#FFA726,color:#FFF
+    style D fill:#EF5350,color:#FFF
+    style E fill:#AB47BC,color:#FFF
+```
 
-Denna dokumentation syftar till att:
+---
 
-- **Förstå verksamheten** - Ge en tydlig bild av hur HVOF fungerar
-- **Stödja systembyte** - Underlätta RFI/upphandling och systemmigration
-- **Dela kunskap** - Central plats för systemkunskap och processbeskrivningar
-- **Planera framtiden** - Målbild och arkitekturprinciper
+## 🎯 Huvudsyften
 
-## Målgrupper
+| Syfte | Beskrivning | Målgrupp |
+|-------|------------|----------|
+| 📖 **Förstå verksamheten** | Ge tydlig bild av HVOF systemlandskap | Alla |
+| 🔄 **Stödja systembyte** | RFI/upphandling, migration & integration | ITD, Ledning |
+| 💡 **Dela kunskap** | Central, uppdaterad kunskapsbank | Alla |
+| 🎯 **Planera framtiden** | Arkitektur, principer & roadmap | IT-ledning |
 
-- **Ledning** - Översikt och strategiska beslut
-- **Verksamhet** - Processer och systemanvändning
-- **IT-avdelning** - Teknisk arkitektur och integrationer
-- **Leverantörer** - RFI-material och kravspecifikationer
+---
 
-## HVOF:s målgrupper
+## 👥 Målgrupper
 
-HVOF ansvarar för insatser som riktar sig till:
-- **Äldre personer**
-- **Vuxna med fysisk funktionsnedsättning**
-- **Vuxna med somatisk sjukdom**
+| Grupp | Intresse | Se |
+|-------|----------|-----|
+| 🎓 **Ledning** | Strategiska beslut, budget, risker | [Gap-analys](../analyses/gap-analysis.md), [Risk-analys](../analyses/risk-analysis.md) |
+| 💼 **Verksamhet** | Processer, systemanvändning, support | [Kärnprocesser](../processes/core-processes/overview.md), [Systemkatalog](../systems/systemkatalog.md) |
+| 🔧 **IT-avdelning** | Arkitektur, integrationer, drift | [Systemlandskap](../systems/system-landscape.md), [Integrationer](../systems/integrations.md) |
+| 🤝 **Leverantörer** | RFI-material, krav, integration points | [RFI-material](../rfi-rfp/rfi-material.md), [Supplier-frågor](../rfi-rfp/supplier-questions.md) |
 
-## Struktur
+---
 
-Dokumentationen är organiserad i följande huvudområden:
+## 🏛️ Om HVOF
 
-1. **Översikt** - Introduktion, organisation, principer
-2. **Processer** - Kärnprocesser och stödprocesser
-3. **System** - Systemlandskap, integrationer, masterdata
-4. **Diagram** - Visuella representationer (arkitektur, processer, dataflöden)
-5. **Analyser** - Gap-analys, pain points, riskanalys
-6. **RFI/RFP** - Material för upphandling
-7. **Roadmap** - Migrationsplan och tidslinjer
+**Hälsa, Vård och Omsorg (HVOF)** är Malmö stads största förvaltning. Vi ansvarar för tjänster till:
 
-## Hur du använder denna dokumentation
+| Målgrupp | Tjänster | System |
+|----------|----------|--------|
+| 👴 **Äldre personer** | Äldreomsorg, hemtjänst, larmtjänst | Lifecare, Kuben, Interview/ISM |
+| ♿ **Fysisk funktionsnedsättning** | Personlig assistans, arbetsergoterapi | Lifecare, Medvind |
+| 🏥 **Somatisk sjukdom** | Rehab, sjukvård | Lifecare, NPÖ, Pascal |
 
-Se [Hur man arbetar](how-to-work.md) för detaljerade instruktioner om hur du:
-- Skapar nya dokument
-- Ritar diagram
-- Lägger in länkar och filer
-- Genererar dokumentation
+**Omfattning**:
+- 📊 57 system i landskapet
+- 👥 ~350 anställda
+- 👨‍👩‍👧‍👦 ~10000 brukare
 
-## Kontakt
+---
 
-För frågor eller förslag, kontakta IT-avdelningen eller se [Kontakt](about/contact.md).
+## 📚 Dokumentstrukt
+
+| Område | Innehål | Syfte |
+|--------|---------|-------|
+| 📖 **Översikt** | Introduktion, organisation, principer, verksamhetsbeskrivning | Förståelse |
+| 🔄 **Processer** | Kärnprocesser, arbetsgång, dataflöden | Operationell vägledning |
+| 🗺️ **System** | Systemlandskap, integrationer, masterdata, enskilda systemdokumentation | Teknisk referens |
+| 📊 **Diagram** | Arkitektur, processer, dataflöden, kritikalitet | Visuell förståelse |
+| 📈 **Analyser** | Gap-analys, pain points, risk-analys | Strategisk planering |
+| 📋 **RFI/RFP** | RFI-material, leverantörsfrågor, kravlistor | Upphandling |
+
+---
+
+## 🚀 Snabbstart
+
+### 👀 Jag vill förstå systemlandskapet
+→ Se **[Systemlandskap](../systems/system-landscape.md)** (visuell översikt av alla 57 system)
+
+### 🔄 Jag arbetar med systembyte
+→ Se **[RFI-material](../rfi-rfp/rfi-material.md)** + **[Gap-analys](../analyses/gap-analysis.md)**
+
+### 👥 Jag vill förstå processerna
+→ Se **[Kärnprocesser](../processes/core-processes/overview.md)**
+
+### 🔧 Jag behöver teknisk arkitektur
+→ Se **[Arkitekturprinciper](./architecture-principles.md)** + **[Integrationer](../systems/integrations.md)**
+
+### ⚠️ Jag behöver förstå riskerna
+→ Se **[Risk-analys](../analyses/risk-analysis.md)** + **[Pain Points](../analyses/pain-points.md)**
+
+### 📱 Jag behöver detaljer om ett specifikt system
+→ Gå till **[Systemkatalog](../systems/systemkatalog.md)** och sök
+
+---
+
+## 📖 Hur man arbetar
+
+Se [Hur man arbetar](how-to-work.md) för detaljerade instruktioner:
+- ✏️ Skapa nya dokument
+- 📊 Rita diagram (Mermaid)
+- 🔗 Länka rätt
+- 📤 Generera & publicera
+
+---
+
+## 🔗 Viktiga länkar
+
+| Länk | Syfte |
+|------|-------|
+| [🗺️ Systemlandskap](../systems/system-landscape.md) | Oversikt över alla 57 system |
+| [📊 Integrationskarta](../systems/integrations.md) | Se hur system kommunicerar |
+| [🏗️ Arkitekturprinciper](./architecture-principles.md) | Designriktlinjer |
+| [📈 Gap-analys](../analyses/gap-analysis.md) | Vad behöver förbättras? |
+| [🚨 Pain Points](../analyses/pain-points.md) | Nuvarande utmaningar |
+| [⚠️ Risk-analys](../analyses/risk-analysis.md) | Systembyterisker |
+| [📋 RFI-material](../rfi-rfp/rfi-material.md) | RFI för leverantörer |
+| [📞 Kontakt](../about/contact.md) | Vem ska jag fråga? |
+
+---
+
+## 💬 Feedback & uppdateringar
+
+!!! tip "Var denna dokumentation användbar?"
+    - ✅ Ja, mycket bra → [Kontakta oss](../about/contact.md)
+    - ❓ Saknar något → [Föreslå uppdatering](../about/contact.md)
+    - ❌ Fel information → [Rapportera](../about/contact.md)
+
+---
+
+## 📞 Support
+
+För frågor eller förslag, kontakta:
+- **📧 IT-arkitektur**: [it-arkitektur@malmo.se](mailto:it-arkitektur@malmo.se)
+- **📞 IT-suppuort**: Se [Kontakt](../about/contact.md)
 

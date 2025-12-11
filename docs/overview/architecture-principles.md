@@ -1,136 +1,177 @@
-# Arkitekturprinciper
+# 🏗️ Arkitekturprinciper
 
-## Översikt
+## 🎯 Vad är detta?
 
-Dessa principer styr hur vi designar, bygger och förvaltar systemarkitekturen inom HVOF.
+!!! note "Definition"
+    Dessa principer styr hur vi designar, bygger och förvaltar systemarkitekturen inom HVOF för att säkerställa flexibilitet, säkerhet och framtida tillväxt.
 
-## 1. API-First
+```mermaid
+graph TB
+    API["🔌 API-First"]
+    Masterdata["📊 Masterdata"]
+    Standard["⚙️ Standard"]
+    Säkerhet["🔐 Säkerhet"]
+    Dokumentation["📚 Dokumentation"]
+    Skalbarhet["📈 Skalbarhet"]
+    Användare["👤 Användarfokus"]
+    Förbättring["🔄 Kontinuerlig"]
+    
+    API --> Integration["Flexibla integrationer"]
+    Masterdata --> Kvalitet["God datakvalitet"]
+    Standard --> Kostnad["Låga kostnader"]
+    Säkerhet --> Skydd["GDPR & Säkerhet"]
+    Dokumentation --> Förståelse["Tydlighet"]
+    Skalbarhet --> Tillväxt["Framtida behov"]
+    Användare --> Adoption["Högt värde"]
+    Förbättring --> Relevans["Håller sig aktuell"]
+```
 
-**Princip**: Alla system ska exponera funktionalitet via API:er.
+---
 
-**Rationale**: 
-- Möjliggör integrationer
-- Underlättar systembyte
-- Stödjer framtida utveckling
+## 🔌 Princip 1: API-First
 
-**Tillämpning**:
-- Nya system måste ha API:er
-- Befintliga system ska migreras mot API-baserad integration
+| Element | Beskrivning |
+|---------|------------|
+| **Mål** | Alla system ska exponera funktionalitet via API:er |
+| **Fördelar** | Möjliggör integrationer, underlättar systembyte, stödjer framtiden |
+| **Implementering** | Nya system kräver API:er; befintliga migreras |
 
-## 2. Masterdata-princip
+<div style="background-color: #E8F5E9; border-left: 4px solid #4CAF50; padding: 12px; margin: 12px 0;">
+<strong>✅ Resultat:</strong> Flexibel systemarkitektur som inte blir låst till en leverantör
+</div>
 
-**Princip**: Varje datadomän har ett master system.
+---
 
-**Rationale**:
-- Undviker datadubbletter
-- Säkerställer datakvalitet
-- Tydlig ansvarsfördelning
+## 📊 Princip 2: Masterdata-princip
 
-**Tillämpning**:
-- Personaldata: HRutan (master)
-- Vårddata: Lifecare-Procapita (master)
-- Ekonomidata: Ekot (master)
-- Larmdata: Interview/ISM (master)
+| Datadomän | Master System | Ansvarig |
+|-----------|---------------|----------|
+| 👥 Personal | HRutan | HR-avdelning |
+| 🏥 Vårddata | Lifecare-Procapita | IT-verksamhet |
+| 💰 Ekonomi | Ekot | Ekonomi |
+| 🚨 Larmdata | Interview/ISM | Larmnav |
 
-## 3. Standard före Special
+!!! info "Datakvalitet"
+    Genom att definiera ett master per domän, undviker vi datadubbletter och säkerställer konsistens
 
-**Princip**: Välj standardlösningar och standardiserade integrationer före speciallösningar.
+---
 
-**Rationale**:
-- Lägre kostnad
-- Enklare underhåll
-- Bättre stöd
+## ⚙️ Princip 3: Standard före Special
 
-**Tillämpning**:
-- HL7 för vårddata
-- REST API:er
-- Standardiserade autentiseringsmetoder (Freja eID, SITHS)
+| Område | Standard | Alternativ |
+|--------|----------|-----------|
+| 🩺 Sjukvårdsdata | HL7 | Proprietary format |
+| 🔌 Integrationer | REST API | SOAP, File transfer |
+| 🔐 Autentisering | Freja eID, SITHS | Lokalt AD |
+| 📊 BI-verktyg | Qlikview | Powerpoint reports |
 
-## 4. Säkerhet by Design
+<div style="background-color: #FFF3E0; border-left: 4px solid #FF9800; padding: 12px; margin: 12px 0;">
+<strong>💡 Fördelar:</strong> Lägre kostnad, enklare underhål,  bättre leverantörsuppgift
+</div>
 
-**Princip**: Säkerhet ska vara inbyggd från början, inte tillagd efteråt.
+---
 
-**Rationale**:
-- Skyddar känslig data
-- Möter GDPR-krav
-- Bygger förtroende
+## 🔐 Princip 4: Säkerhet by Design
 
-**Tillämpning**:
-- SITHS för vårddata
-- Freja eID för SSO
-- Tvåfaktorsautentisering där möjligt
-- Loggning och spårbarhet
+!!! warning "Säkerhet först"
+    Säkerhet ska vara inbyggd från början, inte tillagd efteråt
 
-## 5. Dokumentation och Transparens
+| Område | Implementering |
+|--------|----------------|
+| 🔐 **Autentisering** | SITHS för vårddata, Freja eID för SSO |
+| **Tvåfaktor** | Implementerat för känsliga system |
+| **Kryptering** | TLS för överföring, AES för lagring |
+| **Loggning** | Full spårbarhet av åtkomst |
+| **GDPR** | PII-skydd, dataminimering |
 
-**Princip**: Alla system och integrationer ska vara dokumenterade.
+---
 
-**Rationale**:
-- Underlättar förståelse
-- Stödjer systembyte
-- Minskar risker
+## 📚 Princip 5: Dokumentation & Transparens
 
-**Tillämpning**:
-- Systemdokumentation i denna plattform
-- Diagram för integrationer och processer
-- Uppdaterad information om kontakter och ansvar
+!!! success "Denna dokumentationsplattform"
+    Alla system och integrationer ska vara dokumenterade för att underlätta förståelse och systembyte
 
-## 6. Skalbarhet och Prestanda
+**Omfattning**:
+- ✅ Systemdokumentation för alla 57 system
+- ✅ Integrationdiagram och dataflöden
+- ✅ Processöversikter
+- ✅ Kontakt- och ansvarsinformation
 
-**Princip**: System ska kunna hantera nuvarande och framtida belastning.
+---
 
-**Rationale**:
-- Stödjer verksamhetsutveckling
-- Undviker flaskhalsar
-- Ger god användarupplevelse
+## 📈 Princip 6: Skalbarhet & Prestanda
 
-**Tillämpning**:
-- Cloud-baserade lösningar där möjligt
-- Prestandaövervakning
-- Kapacitetsplanering
+| Dimension | Målbild |
+|-----------|---------|
+| 📊 **Belastning** | Stödjer 2x nuvarande volymer |
+| ⏱️ **Svarstider** | <500ms för normala operationer |
+| 🔴 **Kritiska** | <100ms för larmhantering |
+| 📈 **Tillväxt** | Cloud-baserad för flexibilitet |
 
-## 7. Användarcentrerad Design
+---
 
-**Princip**: System ska vara användarvänliga och stödja verksamheten.
+## 👤 Princip 7: Användarcentrerad Design
 
-**Rationale**:
-- Högre användning
-- Färre fel
-- Bättre effektivitet
+| Fokus | Tillvägagångssätt |
+|--------|------------------|
+| 🎤 **Input** | Regelbundna användarintervjuer |
+| 🧪 **Testning** | Användaracceptanstestning (UAT) |
+| 📣 **Feedback** | Kontinuerlig feedback-samling |
+| 🎯 **Mål** | Högt värde för verksamheten |
 
-**Tillämpning**:
-- Användarintervjuer
-- Användartester
-- Kontinuerlig feedback
+---
 
-## 8. Kontinuerlig Förbättring
+## 🔄 Princip 8: Kontinuerlig Förbättring
 
-**Princip**: Systemarkitekturen ska utvecklas kontinuerligt.
+```mermaid
+graph LR
+    A["📋 Granska"] --> B["🎯 Identifiera"]
+    B --> C["🔧 Implementera"]
+    C --> D["✅ Validera"]
+    D --> A
+    
+    style A fill:#42A5F5,color:#FFF
+    style B fill:#66BB6A,color:#FFF
+    style C fill:#FFA726,color:#FFF
+    style D fill:#EF5350,color:#FFF
+```
 
-**Rationale**:
-- Håller sig relevant
-- Möter nya behov
-- Förbättrar effektivitet
+!!! note "Livscykel"
+    Systemarkitekturen utvecklas kontinuerligt baserat på feedback, nya behov och teknikskiften
 
-**Tillämpning**:
-- Regelbundna granskningar
-- Feedback från verksamhet
-- Uppdatering av dokumentation
+---
 
-## Framtida Målbild
+## 📅 Implementeringsöversikt
 
-### Kort sikt (0-1 år)
-- Standardisera autentisering (mer Freja eID)
-- Förbättra API-täckning
-- Dokumentera alla integrationer
+### 🟢 Kort sikt (0-1 år)
 
-### Medellång sikt (1-3 år)
-- Modernisera kritiska system
-- Förbättra masterdata-hantering
-- Implementera API-gateway
+| Fokus | Aktivitet | Effekt |
+|-------|----------|--------|
+| 🔐 Autentisering | Expandera Freja eID | 🔴 Kritisk |
+| 🔌 API | Förbättra täckning | 🔴 Kritisk |
+| 📚 Dokumentation | Dokumentera integrationer | 🟡 Medel |
 
-### Lång sikt (3+ år)
-- Molnbaserad arkitektur
-- Microservices där lämpligt
-- AI/ML för processoptimering
+### 🟡 Medellång sikt (1-3 år)
 
+| Fokus | Aktivitet | Effekt |
+|-------|----------|--------|
+| 🔄 Modernisering | Uppdatera kritiska system | 🔴 Kritisk |
+| 📊 Masterdata | Automatisera överföringar | 🔴 Kritisk |
+| 🚪 Gateway | Implementera API-gateway | 🟡 Medel |
+
+### 🔵 Lång sikt (3+ år)
+
+| Fokus | Aktivitet | Effekt |
+|-------|----------|--------|
+| ☁️ Cloud | Molnbaserad arkitektur | 🔴 Kritisk |
+| 🔹 Microservices | Där lämpligt | 🟡 Medel |
+| 🤖 AI/ML | Processoptimering | 🟢 Låg |
+
+---
+
+## 🔗 Läs mer
+
+- 🗺️ [Systemlandskap](../systems/system-landscape.md)
+- 📊 [Integrationskarta](../systems/integrations.md)
+- 🔴 [Pain Points](../analyses/pain-points.md)
+- 📈 [Gap-analys](../analyses/gap-analysis.md)

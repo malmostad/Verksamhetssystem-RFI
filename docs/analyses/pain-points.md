@@ -1,146 +1,130 @@
-# Pain Points - Nuvarande problem
+# 🔴 Pain Points - Nuvarande utmaningar
 
-## Översikt
+## Kort sammanfattning
 
-Identifierade problem och utmaningar i nuvarande systemlandskap.
+| Problem | Påverkan | Prioritet |
+|---------|----------|-----------|
+| Många inloggningar | 🔴 Kritisk | Hög |
+| Manuell dataöverföring | 🔴 Kritisk | Hög |
+| Saknad integration | 🟡 Medel | Medel |
+| Begränsad API-täckning | 🟡 Medel | Medel |
+| Komplex systemlandskap | 🟡 Medel | Medel |
 
-## Syfte
+## 🎯 Syfte & metod
 
-Förstå vad som fungerar dåligt idag för att kunna prioritera förbättringar och ställa rätt krav vid systembyte.
+!!! note "Varför denna analys?"
+    Förstå vad som fungerar dåligt idag för att kunna prioritera förbättringar och ställa rätt krav vid systembyte.
 
-## Metod
+**Insamlingsmetod**:
+- 🎤 Intervjuer med användare
+- 📊 Systemanalys
+- 📈 Supportstatistik
 
-- Intervjuer med användare
-- Systemanalys
-- Supportstatistik
+---
 
-## Pain Points
+## 🔴 Kritiska problem (Prioritet: Hög)
 
-### 1. Många olika inloggningar
+### 1️⃣ Många olika inloggningar
 
-**Problem**: Användare måste logga in i många olika system med olika metoder.
+| Aspekt | Beskrivning |
+|--------|-------------|
+| **Problem** | Användare måste logga in i många olika system med olika metoder |
+| **Påverkan** | Tidskrävande, bort glömda lösenord, säkerhetsrisker |
+| **Omfång** | Påverkar alla 57 system |
+| **Effekt** | 🔴 **Kritisk** |
 
-**Påverkan**:
-- Tidskrävande
-- Användare glömmer lösenord
-- Säkerhetsrisk (svaga lösenord)
+<div style="background-color: #fff3cd; border-left: 4px solid #ff9800; padding: 12px; margin: 12px 0;">
+<strong>⚠️ Säkerhetspåverkan:</strong> Användare väljer svagare lösenord när de måste komma ihåg många
+</div>
 
-**System påverkade**: Alla system
+---
 
-**Prioritet**: Hög
+### 2️⃣ Manuell dataöverföring
 
-### 2. Manuell dataöverföring
+| Aspekt | Beskrivning |
+|--------|-------------|
+| **Problem** | Data måste kopieras manuellt mellan system |
+| **Påverkan** | Felrisker, tidskrävande, inkonsekvent data |
+| **Omfång** | HRutan → Medvind, Ekot → Koll-Qlikview |
+| **Effekt** | 🔴 **Kritisk** |
 
-**Problem**: Data måste kopieras manuellt mellan system.
+<div style="background-color: #f8d7da; border-left: 4px solid #dc3545; padding: 12px; margin: 12px 0;">
+<strong>🚨 Datakvalitetsproblem:</strong> Manuella överföringar introducerar fel och inkonsistens
+</div>
 
-**Påverkan**:
-- Felrisker
-- Tidskrävande
-- Inkonsekvent data
+---
 
-**System påverkade**: HRutan → Medvind, Ekot → Koll-Qlikview
+## 🟡 Mediumprioritet problem
 
-**Prioritet**: Hög
-
-### 3. Saknad integration
+### 3️⃣ Saknad integration
 
 **Problem**: System är inte integrerade trots att de borde vara det.
 
-**Påverkan**:
-- Dubbelarbete
-- Felrisker
-- Begränsad funktionalitet
+| Systempar | Påverkan | Orsak |
+|-----------|----------|-------|
+| Visma ↔ HRutan | Dubbelarbete | Ej integrerat |
+| Kuben ↔ Lifecare | Felrisker | Ej integrerat |
+| MCSS ↔ Medvind | Manuell synkronisering | Ej integrerat |
 
-**Exempel**: Visma och HRutan, Kuben och Lifecare-Procapita
+---
 
-**Prioritet**: Medel
+### 4️⃣ Begränsad API-täckning
 
-### 4. Begränsad API-täckning
+!!! warning "API-gränssnitt saknas"
+    Många system saknar API:er eller har begränsade API:er, vilket gör det svårt att bygga automatiserade lösningar
 
-**Problem**: Många system saknar API:er eller har begränsade API:er.
+**Konsekvenser**:
+- 🔗 Svårt att integrera system
+- 💰 Kostsamma speciallösningar
+- ⏱️ Längre implementeringstid
 
-**Påverkan**:
-- Svårt att integrera
-- Begränsade möjligheter
-- Kostsamma speciallösningar
+---
 
-**System påverkade**: Många system
+### 5️⃣ Komplex systemlandskap
 
-**Prioritet**: Medel
+| Kategori | Antal | Komplexitet |
+|----------|-------|-------------|
+| Centrala system | 25 | 🔴 Mycket hög |
+| Molntjänster | 15 | 🟡 Medel |
+| Tjänster | 10 | 🟡 Medel |
+| Applikationer | 3 | 🟢 Låg |
+| Övriga | 3 | 🟢 Låg |
+| **Total** | **57** | **🔴 Komplex** |
 
-### 5. Ouppdaterad dokumentation
+---
 
-**Problem**: Dokumentation är spridd och ouppdaterad.
+## 📋 Handlingsplan - Prioriterad lösning
 
-**Påverkan**:
-- Svårt att hitta information
-- Felaktig information
-- Tidskrävande att hitta rätt person
+### 🟢 Kort sikt (0-6 månader)
 
-**Prioritet**: Låg (löses med denna plattform)
+| Åtgärd | Resultat | Effekt |
+|--------|----------|--------|
+| Standardisera autentisering | Utöka Freja eID till fler system | 🔴 Kritisk |
+| Förbättra dokumentationen | Centraliserad, uppdaterad info | 🟢 Påbörjad |
+| SSO-implementation | Enkle inloggning | 🔴 Kritisk |
 
-### 6. Komplex systemlandskap
+### 🟡 Medellång sikt (6-18 månader)
 
-**Problem**: Många system gör det svårt att förstå helheten.
+| Åtgärd | Resultat | Effekt |
+|--------|----------|--------|
+| Automatisera dataöverföring | Implementera API:er | 🔴 Kritisk |
+| Etablera integrationer | Automatiska dataflöden | 🔴 Kritisk |
+| Masterdata-standard | Konsekvent data | 🟡 Medel |
 
-**Påverkan**:
-- Svårt att förstå flöden
-- Svårt att planera systembyte
-- Risk för missade integrationer
+### 🔵 Lång sikt (18+ månader)
 
-**Prioritet**: Medel
+| Åtgärd | Resultat | Effekt |
+|--------|----------|--------|
+| Förenkla systemlandskapet | Konsolidera system | 🟡 Medel |
+| Ersätt äldre system | Modernare arkitektur | 🟡 Medel |
+| Full API-täckning | Automatiserade flöden | 🔴 Kritisk |
 
-## Prioritering
+---
 
-| Pain Point | Prioritet | Påverkan | Lösbarhet |
-|------------|-----------|----------|-----------|
-| Många inloggningar | Hög | Hög | Medel |
-| Manuell dataöverföring | Hög | Hög | Medel |
-| Saknad integration | Medel | Medel | Medel |
-| Begränsad API-täckning | Medel | Medel | Hög |
-| Ouppdaterad dokumentation | Låg | Medel | Låg |
-| Komplex systemlandskap | Medel | Medel | Låg |
+## 🔗 Läs mer
 
-## Rekommendationer
-
-### Kort sikt
-
-1. **Standardisera autentisering**
-   - Utöka Freja eID till fler system
-   - Implementera SSO där möjligt
-
-2. **Förbättra dokumentationen**
-   - Använd denna plattform
-   - Uppdatera kontinuerligt
-
-### Medellång sikt
-
-1. **Automatisera dataöverföring**
-   - Implementera API:er
-   - Etablera automatiska integrationer
-
-2. **Förbättra integrationer**
-   - Prioritera kritiska integrationer
-   - Standardisera integrationstyper
-
-### Lång sikt
-
-1. **Förenkla systemlandskapet**
-   - Konsolidera system där möjligt
-   - Ersätt äldre system
-
-## Relaterade dokument
-
-- [Gap-analys](gap-analysis.md)
-- [Systemlandskap](../systems/system-landscape.md)
-- [Arkitekturprinciper](../overview/architecture-principles.md)
-
-## Kontakt
-
-För frågor om pain points, kontakta IT-avdelningen.
-
-## Uppdaterad
-
-Senast uppdaterad: 2024-01-XX
-Uppdaterad av: [Namn]
+- 📊 [Gap-analys](gap-analysis.md) - Vad behöver förbättras?
+- 🗺️ [Systemlandskap](../systems/system-landscape.md) - Se alla 57 system
+- 🏗️ [Arkitekturprinciper](../overview/architecture-principles.md) - Designprinciper
+- 📞 [Kontakt IT](../about/contact.md) - Ha frågor?
 

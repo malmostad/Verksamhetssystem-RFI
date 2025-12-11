@@ -1,180 +1,242 @@
-# Riskanalys
+# 🔴 Riskanalys - Systemlandskap & Systembyte
 
-## Översikt
+## 🎯 Syfte
 
-Identifierade risker i nuvarande systemlandskap och vid systembyte.
+!!! danger "Riskhantering"
+    Förstå risker för att kunna hantera dem proaktivt. Denna analys täcker både nuläge och risker vid systembyte.
 
-## Syfte
+**Metod**:
+- 📋 Systemanalys
+- 🎤 Intervjuer med verksamhet & IT
+- 📊 Riskworkshop
 
-Förstå risker för att kunna hantera dem proaktivt.
+---
 
-## Metod
+## 🔴 Risker - Nuläge
 
-- Systemanalys
-- Intervjuer
-- Riskworkshop
+### Risk 1️⃣: Systemberoenden
 
-## Risker - Nuläge
+| Element | Värde |
+|---------|-------|
+| **Beschrivning** | Kritiska system är beroende av äldre system som kan bli ounderhållna |
+| **Sannolikhet** | 🔴 Hög (60-80%) |
+| **Påverkan** | 🔴 Hög (kritisk verksamhet) |
+| **Risknivå** | 🔴 **KRITISK** |
+| **Prioritet** | **1 - HÖGSTA** |
 
-### 1. Systemberoenden
-
-**Risk**: Kritiska system är beroende av äldre system.
-
-**Sannolikhet**: Hög
-**Påverkan**: Hög
-**Risknivå**: 🔴 Hög
-
-**Beskrivning**: Många system är beroende av äldre system som kan bli ounderhållna.
-
-**Åtgärder**:
-- Identifiera kritiska beroenden
-- Planera ersättning
-- Säkerställ support
-
-### 2. Datakvalitet
-
-**Risk**: Data är inkonsekvent eller felaktig.
-
-**Sannolikhet**: Medel
-**Påverkan**: Hög
-**Risknivå**: 🟠 Medel-Hög
-
-**Beskrivning**: Manuell dataöverföring leder till fel.
+<div style="background-color: #FFEBEE; border-left: 4px solid #DC3545; padding: 12px; margin: 12px 0;">
+<strong>⚠️ Exempel beroenden:</strong>
+- Lifecare → Pascal (läkemedel)
+- Kuben → Lifecare (schema)
+- HRutan → Medvind (personal)
+</div>
 
 **Åtgärder**:
-- Automatiserad dataöverföring
-- Validering av data
-- Masterdata-princip
+- ✅ Identifiera kritiska beroenden
+- ✅ Planera ersättning/migrering
+- ✅ Säkerställ leverantörsuppgift under övergång
 
-### 3. Säkerhet
+---
 
-**Risk**: Säkerhetsbrister i system och integrationer.
+### Risk 2️⃣: Datakvalitet
 
-**Sannolikhet**: Medel
-**Påverkan**: Hög
-**Risknivå**: 🟠 Medel-Hög
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Data är inkonsekvent eller felaktig p.g.a. manuell överföring |
+| **Sannolikhet** | 🟡 Medel (40-60%) |
+| **Påverkan** | 🔴 Hög (patientvård påverkas) |
+| **Risknivå** | 🟠 **MEDEL-HÖG** |
+| **Prioritet** | **2 - HÖG** |
 
-**Beskrivning**: Många olika autentiseringsmetoder och begränsad säkerhet.
-
-**Åtgärder**:
-- Standardisera autentisering
-- Tvåfaktorsautentisering
-- Säkerhetsgranskningar
-
-### 4. Kunskapsförlust
-
-**Risk**: Kunskap om system försvinner när personal lämnar.
-
-**Sannolikhet**: Medel
-**Påverkan**: Medel
-**Risknivå**: 🟡 Medel
-
-**Beskrivning**: Begränsad dokumentation och kunskap.
+**Problem**:
+- 📊 8+ system överför data manuellt
+- ❌ Ingen validering av data
+- 🔄 Inkonsistens mellan system
 
 **Åtgärder**:
-- Dokumentera system
-- Kunskapsöverföring
-- Uppdatera dokumentation
+- ✅ Implementera automatiserad överföring (API)
+- ✅ Datakvalitetskontroll & validering
+- ✅ Masterdata-principen
 
-## Risker - Vid systembyte
+---
 
-### 1. Datamigration
+### Risk 3️⃣: Säkerhet
 
-**Risk**: Data går förlorad eller korrupts vid migration.
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Säkerhetsbrister i system och integrationer |
+| **Sannolikhet** | 🟡 Medel (50%) |
+| **Påverkan** | 🔴 Hög (GDPR, patientdata) |
+| **Risknivå** | 🟠 **MEDEL-HÖG** |
+| **Prioritet** | **2 - HÖG** |
 
-**Sannolikhet**: Medel
-**Påverkan**: Hög
-**Risknivå**: 🟠 Medel-Hög
-
-**Åtgärder**:
-- Tydlig migrationsplan
-- Testning
-- Backup och återställning
-
-### 2. Verksamhetsstopp
-
-**Risk**: Verksamheten stoppas under systembyte.
-
-**Sannolikhet**: Låg
-**Påverkan**: Hög
-**Risknivå**: 🟡 Medel
+**Identifierade brister**:
+- 🔐 Många olika autentiseringsmetoder
+- 🚫 Svaga lösenord
+- ❌ Begränsat SSO-stöd
+- 📊 Brist på tvåfaktorsauth
 
 **Åtgärder**:
-- Parallel drift
-- Stegvis migration
-- Rollback-plan
+- ✅ Standardisera på Freja eID + SITHS
+- ✅ Implementera tvåfaktorsautentisering
+- ✅ Regelbundna säkerhetsgranskar
 
-### 3. Integrationer
+---
 
-**Risk**: Integrationer fungerar inte med nytt system.
+### Risk 4️⃣: Kunskapsförlust
 
-**Sannolikhet**: Medel
-**Påverkan**: Hög
-**Risknivå**: 🟠 Medel-Hög
-
-**Åtgärder**:
-- Kartlägg integrationer
-- Testa integrationer
-- Alternativa lösningar
-
-### 4. Användaracceptans
-
-**Risk**: Användare accepterar inte nytt system.
-
-**Sannolikhet**: Medel
-**Påverkan**: Medel
-**Risknivå**: 🟡 Medel
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Kunskap om system försvinner när personal lämnar |
+| **Sannolikhet** | 🟡 Medel (naturlig påverkan) |
+| **Påverkan** | 🟡 Medel (kan leda till fel) |
+| **Risknivå** | 🟡 **MEDEL** |
+| **Prioritet** | **4 - MEDEL** |
 
 **Åtgärder**:
-- Användarinvolvering
-- Utbildning
-- Support
+- ✅ Dokumentera alla system (denna plattform)
+- ✅ Kunskapsöverföring & mentorering
+- ✅ Kontinuerlig uppdatering
 
-## Riskmatris
+---
 
-| Risk | Sannolikhet | Påverkan | Risknivå | Prioritet |
-|------|-------------|----------|----------|-----------|
-| Systemberoenden | Hög | Hög | 🔴 Hög | 1 |
-| Datakvalitet | Medel | Hög | 🟠 Medel-Hög | 2 |
-| Säkerhet | Medel | Hög | 🟠 Medel-Hög | 2 |
-| Datamigration | Medel | Hög | 🟠 Medel-Hög | 3 |
-| Integrationer | Medel | Hög | 🟠 Medel-Hög | 3 |
-| Kunskapsförlust | Medel | Medel | 🟡 Medel | 4 |
-| Verksamhetsstopp | Låg | Hög | 🟡 Medel | 5 |
-| Användaracceptans | Medel | Medel | 🟡 Medel | 6 |
+## ⚠️ Risker - Vid Systembyte
 
-## Åtgärdsplan
+### Risk 1️⃣: Datamigration
 
-### Prioritet 1: Systemberoenden
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Data går förlorad, korrupts eller blir inkonsekvent vid migration |
+| **Sannolikhet** | 🟡 Medel (30-50%) |
+| **Påverkan** | 🔴 Hög (verksamhet stannar) |
+| **Risknivå** | 🟠 **MEDEL-HÖG** |
+| **Prioritet** | **3 - HÖG** |
 
-- [ ] Identifiera kritiska beroenden
-- [ ] Planera ersättning
-- [ ] Säkerställ support
+**Mitigering**:
+- ✅ Tydlig, testerad migrationsplan
+- ✅ Full backup före migrering
+- ✅ Validering av migrerad data
+- ✅ Rollback-procedur om fel uppstår
 
-### Prioritet 2: Datakvalitet och Säkerhet
+---
 
-- [ ] Automatiserad dataöverföring
-- [ ] Standardisera autentisering
-- [ ] Säkerhetsgranskningar
+### Risk 2️⃣: Verksamhetsstopp
 
-### Prioritet 3: Systembyte
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Verksamheten stoppas under systembyte (larmhantering, vård påverkas) |
+| **Sannolikhet** | 🟢 Låg (5-10% om planerat) |
+| **Påverkan** | 🔴 Kritisk (patienter i fara) |
+| **Risknivå** | 🟠 **MEDEL-HÖG** |
+| **Prioritet** | **3 - HÖG** |
 
-- [ ] Tydlig migrationsplan
-- [ ] Kartlägg integrationer
-- [ ] Testning
+**Mitigering**:
+- ✅ Parallel drift under övergång
+- ✅ Stegvis migration per system
+- ✅ Zero-downtime-arkitektur
+- ✅ 24/7 support under implementering
 
-## Relaterade dokument
+---
 
-- [Gap-analys](gap-analysis.md)
-- [Pain Points](pain-points.md)
-- [Systemlandskap](../systems/system-landscape.md)
+### Risk 3️⃣: Integrationsproblem
 
-## Kontakt
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Integrationer fungerar inte med nytt system |
+| **Sannolikhet** | 🟡 Medel (40-60%) |
+| **Påverkan** | 🔴 Hög (många system påverkas) |
+| **Risknivå** | 🟠 **MEDEL-HÖG** |
+| **Prioritet** | **3 - HÖG** |
 
-För frågor om risker, kontakta IT-avdelningen.
+**Mitigering**:
+- ✅ Kartlägg alla integrationer (redan gjort)
+- ✅ Testa integrationer innan go-live
+- ✅ Alternativa lösningar planerade
+- ✅ API-first-princip
 
-## Uppdaterad
+---
 
-Senast uppdaterad: 2024-01-XX
-Uppdaterad av: [Namn]
+### Risk 4️⃣: Användaracceptans
+
+| Element | Värde |
+|---------|-------|
+| **Beskrivning** | Användare accepterar inte eller motsätter sig nytt system |
+| **Sannolikhet** | 🟡 Medel (40%) |
+| **Påverkan** | 🟡 Medel (lägre produktivitet) |
+| **Risknivå** | 🟡 **MEDEL** |
+| **Prioritet** | **5 - MEDEL** |
+
+**Mitigering**:
+- ✅ Användarinvolvering från dag 1
+- ✅ Omfattande utbildning
+- ✅ Superanvändare & champions
+- ✅ Kontinuerlig support
+
+---
+
+## 📊 Riskmatris - Prioritering
+
+| Risk | Sannolikhet | Påverkan | Nivå | Prioritet | Status |
+|------|-------------|----------|------|-----------|--------|
+| 🔴 Systemberoenden | Hög | Hög | 🔴 Kritisk | **1** | 🔴 Öppen |
+| 📊 Datakvalitet | Medel | Hög | 🟠 Medel-Hög | **2** | 🟡 Plan |
+| 🔐 Säkerhet | Medel | Hög | 🟠 Medel-Hög | **2** | 🟡 Plan |
+| 📦 Datamigration | Medel | Hög | 🟠 Medel-Hög | **3** | 🟡 Plan |
+| 🔗 Integrationer | Medel | Hög | 🟠 Medel-Hög | **3** | 🟡 Plan |
+| 💼 Kunskapsförlust | Medel | Medel | 🟡 Medel | **4** | ✅ Påbörjat |
+| ⏸️ Verksamhetsstopp | Låg | Hög | 🟠 Medel-Hög | **3** | 🟡 Plan |
+| 👥 Användaracceptans | Medel | Medel | 🟡 Medel | **5** | 🟡 Plan |
+
+---
+
+## 🎯 Åtgärdsplan per Prioritet
+
+### 🔴 Prioritet 1: Systemberoenden (OMEDELBAR)
+
+| Åtgärd | Tidslinje | Ansvarig | Resultat |
+|--------|-----------|----------|----------|
+| Kartlägg alla kritiska beroenden | Q1 | IT-arkitektur | 📋 Dokumenterat |
+| Identifiera "slöa" system | Q1 | IT-drift | 📋 Klassificerat |
+| Planera ersättning | Q2 | ITD-ledning | 🎯 Roadmap |
+| Säkerställ leverantörsuppgift | Q2 | Upphandling | ✅ Kontrakt |
+
+---
+
+### 🟠 Prioritet 2: Datakvalitet & Säkerhet (HÖG)
+
+| Åtgärd | Tidslinje | Ansvarig | Resultat |
+|--------|-----------|----------|----------|
+| Automatisera dataöverföring | Q2-Q3 | IT-arkitektur | ⚡ API-integrationer |
+| Implementera datakvalitetskontroll | Q2 | IT-verksamhet | ✅ Validering |
+| Expandera Freja eID | Q1-Q2 | IT-säkerhet | 🔐 SSO på flera system |
+| Tvåfaktorsauth på känsliga system | Q3 | IT-säkerhet | 🔐 Skyddad access |
+
+---
+
+### 🟡 Prioritet 3-5: Migration & Övriga (MEDEL)
+
+**Migrering, integrationer, användaracceptans**: Se migrationplan (separat dokument)
+
+---
+
+| Risk | Ägare | Monitor | Godkänd |
+|------|-------|---------|---------|
+| Systemberoenden | IT-ledning | IT-arkitektur | Director |
+| Datakvalitet | IT-verksamhet | Qualitetsansvarig | Director |
+| Säkerhet | IT-säkerhet | Säkerhetschef | CISO |
+| Datamigration | Projektledare | Migrationsteam | Director |
+| Verksamhetsstopp | Operationell ledning | On-call manager | Drift |
+| Integrationer | IT-arkitektur | Integrationsteam | Director |
+| Kunskapsförlust | HR + IT-drift | Kompetenscenter | HR-chef |
+| Användaracceptans | Verksamhetsledning | Change manager | V-ledning |
+
+---
+
+## 🔗 Läs mer
+
+- 📈 [Gap-analys](gap-analysis.md) - Vad behöver förbättras?
+- 🚨 [Pain Points](pain-points.md) - Nuvarande problem
+- 🗺️ [Systemlandskap](../systems/system-landscape.md) - Se alla system
+- 🔗 [Integrationskarta](../systems/integrations.md) - Systemsamband
+- 📊 [Masterdata](../systems/masterdata.md) - Datakvalitet
 

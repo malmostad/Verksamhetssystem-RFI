@@ -1,10 +1,13 @@
-# Informationsmodell - Nuläge
+# 📊 Informationsmodell - Masterdata
 
-## Översikt
+## 🎯 Vad är masterdata?
 
-Denna modell beskriver viktiga informationsdomäner och deras relationer i HVOFs systemlandskap.
+!!! note "Definition"
+    Masterdata är den auktoritativa källan för information inom varje domän. Denna modell beskriver viktiga informationsdomäner, deras relationer och ansvar i HVOFs systemlandskap.
 
-## Informationsdomäner
+Principen: **En master per datadomän** 👑
+
+---
 
 ```mermaid
 erDiagram
@@ -83,177 +86,253 @@ erDiagram
         decimal belopp
         date datum
     }
-```
+## 👥 Datadomäner - Översikt
 
-## Huvuddomäner
+| # | Domän | Master | Dataägare | Kritikalitet | Sekundära System |
+|---|-------|--------|-----------|--------------|------------------|
+| 1 | 👥 Personal | HRutan | HR/SEF | 🔴 Hög | Medvind, Visma, Lärkan |
+| 2 | 🏥 Brukare/Patient | Lifecare | ÖSA/FSF | 🔴 Hög | NPÖ, Pascal, Kuben |
+| 3 | 🩺 Vårddata | Lifecare | ÖSA/FSF | 🔴 Kritisk | Kuben, Phoniro Care |
+| 4 | 🚨 Larmdata | Interview/ISM | Larmcentral | 🔴 Kritisk | 3CX, CMP, Guardtools |
+| 5 | 💰 Ekonomi | Ekot | Ekonomi | 🟡 Medel | Koll-Qlikview, Stratsys |
+| 6 | 📋 IT-ärenden | MSM/Marval | ITD | 🟡 Medel | — |
+| 7 | 🏢 Fastigheter | Lime CRM | Larmcentral | 🟢 Låg | — |
+| 8 | 📄 Dokument | Distribuerat | Varierande | 🟡 Medel | Platina, EcoTech |
 
-### 1. Person (Master: HRutan, Lifecare-Procapita)
+!!! tip "Databeskyttning"
+    Alla datadomäner innehåller känslig information (GDPR, säkerhet). Masterdatasystemen måste skyddas högt.
 
-**Viktiga attribut:**
-- Personnummer
-- Namn
-- Adress
-- Kontaktuppgifter
-- Vårdrelationer
+---
 
-**System som hanterar:**
-- **HRutan** - Personal (master)
-- **Lifecare-Procapita** - Brukare/patienter (master)
-- **NPÖ** - Patientöversikt (referens)
-- **Interview/ISM** - Larmmottagning
+## 📐 Datarelationer - Modell
 
-### 2. Vård och Omsorg (Master: Lifecare-Procapita)
+**Se ERDiagram ovan för relationerna mellan entiteterna.**
 
-**Viktiga attribut:**
-- Journalanteckningar
-- Vårdplaner
-- Tidsplanering
-- Insatser
-- Uppföljning
+---
 
-**System som hanterar:**
-- **Lifecare-Procapita** - Master för vårddata
-- **Kuben** - Tidsplanering
-- **Phoniro Care** - Tid och insatsuppföljning
-- **NPÖ** - Nationell patientöversikt
-- **Mina planer** - Samordnad vårdplanering
+## 🎯 Datadomäner - Detaljer
 
-### 3. Läkemedel (Master: Pascal, MCSS)
+### 1️⃣ Personal | 👥
 
-**Viktiga attribut:**
-- Läkemedelsbeställningar
-- Dosering
-- Signering
-- Expedition
+### 1️⃣ Personal | 👥
 
-**System som hanterar:**
-- **Pascal** - Beställning och expedition (Inera)
-- **MCSS** - Digital signering
-- **Lifecare-Procapita** - Journal (referens)
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 HRutan |
+| **Dataägare** | HR-avdelning / SEF |
+| **Kritikalitet** | 🔴 Hög |
+| **Volym** | ~350 aktiva + vikarier |
 
-### 4. Larm och Trygghet (Master: Interview/ISM)
+**Nyckeldata**:
+- Personalnummer, namn, roll, organisation
+- Kompetens, arbetsuppgifter, tidrapportering
 
-**Viktiga attribut:**
-- Larmtyp (trygghetslarm, personlarm, inbrottslarm)
-- Tidpunkt
-- Status
-- Hantering
-- Uppföljning
+**Sekundära system**:
+- Medvind (tidsregistrering)
+- Visma (rekrytering)
+- Vikariebanken (timvikarier)
+- Lärkan (utbildning)
 
-**System som hanterar:**
-- **Interview/ISM** - Master för larmdata
-- **3CX** - Telefonväxel
-- **CMP** - Trygghetslarm administration
-- **Guardtools** - Väktaraviseringar
-- **Milestone** - Kameralarm
-- **Viser** - Larmsystem säbo
-- **Sensio/Smooth lite** - Trygghetssensorer
+---
 
-### 5. Personal (Master: HRutan)
+### 2️⃣ Brukare/Patient | 🏥
 
-**Viktiga attribut:**
-- Personalnummer
-- Roll
-- Organisation
-- Kompetens
-- Tidsregistrering
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 Lifecare-Procapita |
+| **Dataägare** | Äldreomsorg & Funktionsstöd (ÖSA/FSF) |
+| **Kritikalitet** | 🔴 Kritisk |
+| **Volym** | ~8000-10000 aktiva brukare |
 
-**System som hanterar:**
-- **HRutan** - Master för personaldata
-- **Medvind** - Personalsystem
-- **Visma** - Rekrytering
-- **Vikariebanken** - Timvikarier
-- **Lärkan** - Utbildning
+**Nyckeldata**:
+- Personnummer, namn, adress, kontaktuppgifter
+- Vårdrelationer, vårdplan, behov
 
-### 6. Ekonomi (Master: Ekot/Raindance)
+**Sekundära system**:
+- NPÖ (patientöversikt)
+- Pascal (läkemedel)
+- Kuben (tidsplanering)
 
-**Viktiga attribut:**
-- Kostnadsställen
-- Budget
-- Fakturor
-- Betalningar
-- Rapportering
+<div style="background-color: #E8F5E9; border-left: 4px solid #4CAF50; padding: 12px; margin: 12px 0;">
+<strong>✅ Källa till sanning:</strong> Lifecare är enda källan för brukarinformation. Andra system är läsare.
+</div>
 
-**System som hanterar:**
-- **Ekot (Raindance)** - Master för ekonomidata
-- **Koll-Qlikview** - Business intelligence
-- **Stratsys** - Statistik och rapportering
+---
 
-### 7. Ärenden (Master: MSM/Marval, Agera)
+### 3️⃣ Vårddata | 🩺
 
-**Viktiga attribut:**
-- Ärendenummer
-- Ärendetyp
-- Status
-- Ansvarig
-- Dokumentation
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 Lifecare-Procapita |
+| **Dataägare** | Äldreomsorg & Funktionsstöd (ÖSA/FSF) |
+| **Kritikalitet** | 🔴 Kritisk |
+| **Standard** | HL7 FHIR, HSV-standarden |
 
-**System som hanterar:**
-- **MSM (Marval)** - IT-ärenden (master)
-- **Agera** - Incidentrapportering
-- **Optinet** - Ärendehantering tekniker
-- **Avvikelsehanteringssystem** - Avvikelser och synpunkter
-- **Platina** - Nämndsfrågor
+**Nyckeldata**:
+- Journalanteckningar, vårdplaner
+- Insatser, tidsplanering, uppföljning
+- Medicinering, undersökningar
 
-### 8. Dokument (Distribuerat)
+**Sekundära system**:
+- Kuben (tidsplanering)
+- Phoniro Care (tid/insatsuppföljning)
+- Mina planer (samordnad vårdplanering)
 
-**Viktiga attribut:**
-- Dokumenttyp
-- Innehåll
-- Version
-- Ägare
-- Åtkomst
+!!! warning "Säkerhetskritisk"
+    Vårddata är känslig och ska bara lagras i Lifecare. Andra system får endast läsåtkomst via säkra API:er.
 
-**System som hanterar:**
-- **Platina** - Nämndsfrågor
-- **EcoTech** - Kvalitet och dokumenthantering
-- **Adato** - Rehabärenden
-- **Lifecare-Procapita** - Journaldokument
+---
 
-## Masterdata - Dataägaransvar
+### 4️⃣ Läkemedel | 💊
 
-| Datadomän | Master System | Dataägare | Sekundära System |
-|-----------|--------------|-----------|------------------|
-| Personal | HRutan | HR/SEF | Medvind, Visma |
-| Brukare/Patienter | Lifecare-Procapita | ÖSA/FSF | NPÖ, Pascal |
-| Vårddata | Lifecare-Procapita | ÖSA/FSF | Kuben, Phoniro Care |
-| Larmdata | Interview/ISM | Larmcentralen | 3CX, CMP, Guardtools |
-| Ekonomi | Ekot (Raindance) | Ekonomi | Koll-Qlikview, Stratsys |
-| IT-ärenden | MSM (Marval) | ITD | - |
-| Fastigheter | Lime CRM | Larmcentralen | - |
+| Element | Värde |
+|---------|-------|
+| **Masters** | 🔑 Pascal + MCSS (delat ansvar) |
+| **Dataägare** | ÖSA/FSF |
+| **Kritikalitet** | 🔴 Kritisk |
+| **Regulation** | E-recept, SITHS-signering |
 
-## Datakvalitet och Utmaningar
+**Nyckeldata**:
+- Läkemedelsbeställningar, dosering
+- Digital signering, expedition
+- Allergier, kontraindikationer
 
-### Identifierade problem
-1. **Flera masters för samma data**
-   - Personal: HRutan och Medvind
-   - Risk för inkonsekvent data
+**Sekundära system**:
+- Lifecare (patientjournal)
+- MCSS (digital signering)
 
-2. **Brist på datastandardisering**
-   - Olika format och strukturer
-   - Svårt att integrera
+---
 
-3. **Begränsad datakvalitetskontroll**
-   - Brist på validering
-   - Risk för felaktig data
+### 5️⃣ Larm & Trygghet | 🚨
 
-4. **Distribuerad dokumentation**
-   - Dokument i flera system
-   - Svårt att hitta och hantera
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 Interview/ISM |
+| **Dataägare** | Larmnav/Larmcentral |
+| **Kritikalitet** | 🔴 Kritisk |
+| **Volym** | 200-500 larm/dag |
 
-## Framtida Mål - Informationshantering
+**Nyckeldata**:
+- Larmtyp, tidpunkt, status
+- Hantering, uppföljning, sluttidpunkt
+
+**Larmtyper**:
+- 🚨 Personlarm (mobilt/armband)
+- 🏠 Trygghetslarm (hemma)
+- 🔒 Inbrottslarm (säkerhet)
+- 📹 Kameralarm
+
+**Sekundära system**:
+- 3CX (telefoniöverföring)
+- CMP (sensoröversikt)
+- Guardtools (väktarsamordning)
+- Milestone (kameralarm)
+
+<div style="background-color: #FFEBEE; border-left: 4px solid #DC3545; padding: 12px; margin: 12px 0;">
+<strong>🚨 Livskritisk:</strong> Denna system måste ha 99.9% tillgänglighet. Redundans och backup krävs.
+</div>
+
+---
+
+### 6️⃣ Ekonomi | 💰
+
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 Ekot (Raindance) |
+| **Dataägare** | Ekonomi-avdelning |
+| **Kritikalitet** | 🟡 Medel |
+| **Budget** | Årliga budgetar per kostnadsställe |
+
+**Nyckeldata**:
+- Kostnadsställen, budget, utgifter
+- Fakturor, betalningar, rapportering
+
+**Sekundära system**:
+- Koll-Qlikview (BI & rapportering)
+- Stratsys (statistik)
+
+---
+
+### 7️⃣ IT-Ärenden | 📋
+
+| Element | Värde |
+|---------|-------|
+| **Master** | 🔑 MSM (Marval) |
+| **Dataägare** | IT-avdelning (ITD) |
+| **Kritikalitet** | 🟡 Medel |
+| **Ärendetyper** | Support, förvaltning, projekt |
+
+**Kopplade system**:
+- Agera (incidentrapportering)
+- Optinet (teknikerärenden)
+- Avvikelsehanteringssystem
+
+---
+
+### 8️⃣ Dokument | 📄
+
+| Element | Värde |
+|---------|-------|
+| **Master** | Distribuerat (inget centralt master) |
+| **Dataägare** | Varierande per typ |
+| **Kritikalitet** | 🟡 Medel |
+| **Utmaning** | Fragmenterad, svår att hitta |
+
+**System som hanterar**:
+- Platina (nämndsfrågor)
+- EcoTech (QMS & dokumenthantering)
+- Adato (rehabärenden)
+- Lifecare (journaldokument)
+
+!!! danger "Problem"
+    Dokumentation är fragmenterad över många system. Behöver standardiserad dokumenthantering.
+
+---
+
+## ⚠️ Datakvalitetsproblem
+
+| Problem | Påverkan | Lösning | Prioritet |
+|---------|----------|--------|----------|
+| 🔴 Flera masters för samma data | Inkonsistens | Definiera ett master | 🔴 Hög |
+| 📊 Brist på standardisering | Integreringsproblem | Adoptera standarder | 🔴 Hög |
+| ✋ Manuell dataöverföring | Felrisker | Automatisera | 🔴 Hög |
+| 🔍 Svag datakvalitetskontroll | Felaktig data | Implementera validering | 🟡 Medel |
+| 📚 Distribuerad dokumentation | Svårfytt | Centralisera | 🟡 Medel |
+
+---
+
+## 🎯 Framtida målbild - Masterdata
 
 ### Principer
-1. **En master per datadomän**
-2. **Tydligt dataägaransvar**
-3. **Standardiserade datamodeller**
-4. **Datakvalitetskontroll**
-5. **Dokumenterad datamodell**
 
-### Prioriterade förbättringar
-1. Definiera tydligt masterdata för varje domän
-2. Etablera dataägaransvar
-3. Standardisera datamodeller
-4. Implementera datakvalitetskontroll
-5. Dokumentera informationsmodell
+```mermaid
+graph TB
+    A["👑 En Master<br/>per Domän"] --> B["✅ Datakvalitet"]
+    C["📊 Standardiserad<br/>Modell"] --> D["🔗 Enkel Integration"]
+    E["✋ Automatiserad<br/>Överföring"] --> F["⏱️ Realtidsdata"]
+    G["🔍 Quality Control<br/>Inbyggd"] --> H["🛡️ Säker Data"]
+    
+    B --> Resultat["🎉 Pålitlig Arkitektur"]
+    D --> Resultat
+    F --> Resultat
+    H --> Resultat
+```
+
+### Migreringsplan
+
+| Fas | Tidslinje | Fokus | Resultat |
+|-----|-----------|-------|----------|
+| **1. Definiera** | Q1 | Tydliga masters | 📋 Dokumenterat |
+| **2. Standardisera** | Q2-Q3 | Datamodeller | 📊 Konsistent |
+| **3. Automatisera** | Q4+ | API-överföringar | ⚡ Realtid |
+| **4. Validera** | År 2+ | Kvalitetskontroll | ✅ Ren data |
+
+---
+
+## 🔗 Läs mer
+
+- 🏗️ [Arkitekturprinciper](../overview/architecture-principles.md) - Masterdata-princip
+- 🔗 [Integrationskarta](./integrations.md) - Dataflöden
+- 🗺️ [Systemlandskap](./system-landscape.md) - Se alla system
+- 🚨 [Pain Points](../analyses/pain-points.md) - Manuell överföring
 

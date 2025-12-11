@@ -1,131 +1,118 @@
-# Gap-analys - Nuläge vs Målbild
+# 📊 Gap-analys - AS-IS vs TO-BE
 
-## Översikt
+## 🎯 Översikt
 
 Denna analys identifierar gap mellan nuvarande (AS-IS) och önskad (TO-BE) systemarkitektur.
 
-## Syfte
+!!! info "Om denna analys"
+    Identifiera vad som saknas för att nå målbilden och prioritera förbättringar.
 
-Identifiera vad som saknas för att nå målbilden och prioritera förbättringar.
+**Genomfört med**:
+- 📋 Systemanalys
+- 🎤 Intervjuer med verksamhet
+- 📈 Jämförelse med målbild
 
-## Metod
+---
 
-- Systemanalys
-- Intervjuer med verksamhet
-- Jämförelse med målbild
+## 🔴 Gap 1: Autentisering
 
-## Gap-områden
+| Dimension | Nuläge (AS-IS) | Målbild (TO-BE) | Status |
+|-----------|-----------------|----------------|----|
+| **Metoder** | Användarnamn + lösenord | Freja eID | ❌ Gap |
+| **SSO-stöd** | Begränsat | Alla system | ❌ Gap |
+| **Tvåfaktorsauth** | Saknat | Implementerat | ❌ Gap |
+| **Prioritet** | — | **Hög** | 🔴 Kritisk |
 
-### 1. Autentisering
+!!! warning "Säkerhetsgap"
+    Många inloggningsmetoder minskar säkerheten. Användare väljer svagare lösenord och säkerhetsbristen ökar.
 
-**Nuläge (AS-IS)**:
-- Många olika autentiseringsmetoder
-- Användarnamn + lösenord i många system
-- Begränsat SSO-stöd
+**Rekommendation**: Implementera Freja eID för fler system inom 6 månader
 
-**Målbild (TO-BE)**:
-- Freja eID som primär metod
-- SSO för alla system
-- Tvåfaktorsautentisering där lämpligt
+---
 
-**Gap**:
-- ❌ Många system saknar Freja eID-stöd
-- ❌ Ingen central SSO-lösning
-- ❌ Begränsat stöd för tvåfaktorsautentisering
+## 🔴 Gap 2: Masterdata-hantering
 
-**Prioritet**: Hög
+| Dimension | Nuläge (AS-IS) | Målbild (TO-BE) | Status |
+|-----------|-----------------|----------------|----|
+| **Hantering** | Manuell överföring | Automatisk dataöverföring | ❌ Gap |
+| **Datakvalitet** | Inkonsekvent | Centraliserad | ❌ Gap |
+| **Masterdata** | Flera kopior | Ett master per domän | ❌ Gap |
+| **Prioritet** | — | **Hög** | 🔴 Kritisk |
 
-### 2. Masterdata-hantering
+<div style="background-color: #f8d7da; border-left: 4px solid #dc3545; padding: 12px; margin: 12px 0;">
+<strong>🚨 Datakvalitet:</strong> Manuell överföring mellan 8+ system orsakar fel och datainkonsekvens
+</div>
 
-**Nuläge (AS-IS)**:
-- Masterdata definierat men inte konsekvent följt
-- Manuell dataöverföring
-- Data i flera system
+**Rekommendation**: Etablera automatisk dataöverföring för kritiska system inom 12 månader
 
-**Målbild (TO-BE)**:
-- Tydlig masterdata-princip
-- Automatisk dataöverföring
-- Ett master per datadomän
+---
 
-**Gap**:
-- ❌ Saknar automatisk dataöverföring
-- ❌ Data finns i flera system
-- ❌ Ingen central masterdata-hantering
+## 🟡 Gap 3: API-täckning
 
-**Prioritet**: Hög
+| Dimension | Nuläge (AS-IS) | Målbild (TO-BE) | Status |
+|-----------|-----------------|----------------|----|
+| **API-täckning** | Begränsad (30%) | 100% | ❌ Gap |
+| **Integrationstyp** | Batch + manuell | REST API realtid | ⚠️ Delvis |
+| **Dokumentation** | Spridd | Centraliserad | ✅ Löst |
+| **Prioritet** | — | **Medel** | 🟡 Högt |
 
-### 3. API-täckning
+| System | API-status | Behov |
+|--------|-----------|-------|
+| Lifecare-Procapita | 🔴 Ingen | 🔴 Kritisk |
+| HRutan | 🔴 Begränsad | 🟡 Hög |
+| Medvind | 🟡 Delvis | 🟡 Medel |
+| Ekot | 🔴 Batch | 🔴 Kritisk |
+| Koll-Qlikview | 🔴 Ingen | 🟡 Medel |
 
-**Nuläge (AS-IS)**:
-- Begränsad API-täckning
-- Många batch-integrationer
-- Saknade API:er för viktiga system
+**Rekommendation**: Prioritera API-utveckling för de 5 kritiska systemen
 
-**Målbild (TO-BE)**:
-- API-first-princip
-- REST API:er för alla system
-- Realtidsintegrationer
+---
 
-**Gap**:
-- ❌ Många system saknar API:er
-- ❌ För många batch-integrationer
-- ❌ Begränsat stöd för realtidsintegrationer
+## 🟢 Gap 4: Dokumentation
 
-**Prioritet**: Medel
+| Dimension | Nuläge (AS-IS) | Målbild (TO-BE) | Status |
+|-----------|-----------------|----------------|----|
+| **Lagring** | Spridd (Teams, Wiki, mail) | Centraliserad | ✅ Löst |
+| **Uppdaterad** | Gammal (2021) | Aktuell | ✅ Löst |
+| **Tillgänglig** | Svårhittat | Enkelt att hitta | ✅ Löst |
+| **Prioritet** | — | **Låg** | 🟢 Löst |
 
-### 4. Dokumentation
+!!! success "Framsteg"
+    Denna dokumentationsplattform löser redan detta gap. Fortsätt att uppdatera regelbundet!
 
-**Nuläge (AS-IS)**:
-- Dokumentation spridd
-- Ouppdaterad information
-- Begränsad tillgänglighet
+---
 
-**Målbild (TO-BE)**:
-- Centraliserad dokumentation
-- Uppdaterad information
-- Lättillgänglig för alla
+## 📅 Implementeringskarta
 
-**Gap**:
-- ✅ Denna dokumentation löser detta
-- ⚠️ Behöver uppdateras kontinuerligt
+```mermaid
+timeline
+    title Implementation Timeline - Roadmap
+    
+    section Kort sikt (0-6 mån)
+    Q1-Q2 : Expandera Freja eID : Förbättra dokumentation : SSO-pilotprojekt
+    
+    section Medel sikt (6-18 mån)
+    Q3-Q4 : API-utveckling (fas 1) : Masterdata-automatisering : Integrationsprojekt
+    
+    section Lång sikt (18+ mån)
+    Q5+ : API-täckning 100% : Systemkonsolidering : Modernisering
+```
 
-**Prioritet**: Låg (på väg att lösas)
+## 🎯 Prioriterad handlingsplan
 
-## Prioritering
+| # | Gap | Prioritet | Start | Resultat | Ansvarig |
+|---|-----|-----------|-------|----------|----------|
+| 1 | Autentisering | 🔴 Hög | Q1 | Freja eID + SSO | IT-arkitektur |
+| 2 | Masterdata | 🔴 Hög | Q2 | Automatisk synk | IT-arkitektur |
+| 3 | API-täckning | 🟡 Medel | Q3 | 60% täckning | Leverantörer + IT |
+| 4 | Dokumentation | 🟢 Låg | ✅ Pågår | Uppdaterad | Alla |
 
-| Gap | Prioritet | Effekt | Ansträngning | Rekommendation |
-|-----|-----------|--------|--------------|----------------|
-| Autentisering | Hög | Hög | Medel | Implementera Freja eID för fler system |
-| Masterdata | Hög | Hög | Hög | Etablera automatisk dataöverföring |
-| API-täckning | Medel | Medel | Hög | Prioritera API:er för nya system |
-| Dokumentation | Låg | Medel | Låg | Fortsätt med denna plattform |
+---
 
-## Nästa steg
+## 🔗 Läs mer
 
-1. **Kort sikt (0-6 månader)**
-   - Utöka Freja eID till fler system
-   - Förbättra dokumentationen
-
-2. **Medellång sikt (6-18 månader)**
-   - Implementera automatisk masterdata-överföring
-   - Utveckla API:er för kritiska system
-
-3. **Lång sikt (18+ månader)**
-   - Full API-täckning
-   - Centraliserad masterdata-hantering
-
-## Relaterade dokument
-
-- [Arkitekturprinciper](../overview/architecture-principles.md)
-- [Systemlandskap](../systems/system-landscape.md)
-- [Pain Points](pain-points.md)
-
-## Kontakt
-
-För frågor om denna analys, kontakta IT-avdelningen.
-
-## Uppdaterad
-
-Senast uppdaterad: 2024-01-XX
-Uppdaterad av: [Namn]
+- 🚨 [Pain Points](pain-points.md) - Nuvarande problem
+- 🗺️ [Systemlandskap](../systems/system-landscape.md) - Se alla system
+- 🏗️ [Arkitekturprinciper](../overview/architecture-principles.md) - Designprinciper
+- 📞 [Kontakt](../about/contact.md) - Frågor?
 

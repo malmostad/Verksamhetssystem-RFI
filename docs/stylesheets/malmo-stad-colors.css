@@ -1,0 +1,136 @@
+/* 
+ * Malmö stad - Official Color Palette
+ * Applied to Material Theme
+ */
+
+/* Stadsgrön (Main) - #01351C */
+:root {
+  /* Stadsgrön - Official primary color */
+  --md-primary-fg-color: #01351C;
+  --md-primary-fg-color--light: #024D2E;
+  --md-primary-fg-color--dark: #001F13;
+  
+  /* Grön - Secondary green */
+  --md-primary-bg-color: #6EAA5B;
+  --md-accent-fg-color: #6EAA5B;
+  
+  /* Mellangrön - Tertiary */
+  --md-tertiary-fg-color: #9ABEAA;
+  
+  /* Ljusgrön - Light variant */
+  --md-light-green: #D1E0D7;
+}
+
+/* Light scheme */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #01351C;
+  --md-primary-fg-color--light: #024D2E;
+  --md-primary-fg-color--dark: #001F13;
+  --md-accent-fg-color: #6EAA5B;
+  --md-typeset-a-color: #6EAA5B;
+}
+
+/* Dark scheme */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #6EAA5B;
+  --md-primary-fg-color--light: #9ABEAA;
+  --md-primary-fg-color--dark: #01351C;
+  --md-accent-fg-color: #9ABEAA;
+  --md-typeset-a-color: #9ABEAA;
+}
+
+/* Header styling */
+.md-header {
+  background-color: #01351C;
+  color: white;
+}
+
+.md-header__button {
+  color: white;
+}
+
+/* Sidebar and navigation */
+.md-sidebar {
+  background-color: #f5f5f5;
+}
+
+.md-nav__link--active {
+  border-left-color: #6EAA5B;
+  color: #01351C;
+}
+
+.md-nav__link:hover {
+  color: #6EAA5B;
+}
+
+/* Buttons and highlights */
+.md-button {
+  background-color: #6EAA5B;
+  color: white;
+  border-color: #01351C;
+}
+
+.md-button:hover {
+  background-color: #01351C;
+  color: white;
+}
+
+/* Code blocks */
+.highlight {
+  background-color: #f5f5f5;
+  border-left: 4px solid #6EAA5B;
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-left-color: #6EAA5B;
+}
+
+.md-typeset .admonition.info {
+  background-color: #f0f5f1;
+  border-left-color: #6EAA5B;
+}
+
+.md-typeset .admonition.note {
+  background-color: #f0f5f1;
+  border-left-color: #9ABEAA;
+}
+
+/* Table styling */
+.md-typeset table {
+  border-collapse: collapse;
+}
+
+.md-typeset table tbody tr:hover {
+  background-color: #f0f5f1;
+}
+
+/* Links */
+.md-typeset a {
+  color: #6EAA5B;
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: #01351C;
+  text-decoration: underline;
+}
+
+/* Card-like elements (divs with border) */
+.md-card {
+  border: 1px solid #D1E0D7;
+  border-left: 4px solid #6EAA5B;
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* Mermaid diagram colors */
+.mermaid {
+  --primary-color: #6EAA5B;
+  --primary-text-color: #01351C;
+  --primary-border-color: #01351C;
+  --line-color: #9ABEAA;
+  --secondary-color: #D1E0D7;
+  --tertiary-color: #f0f5f1;
+}

@@ -13,14 +13,14 @@ theme:
   favicon: images/malmo-stad-logo.png
   palette:
     - scheme: default
-      primary: green
-      accent: green
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: green
-      accent: green
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -35,6 +35,10 @@ theme:
     - content.code.copy
   icon:
     repo: fontawesome/brands/github
+  custom_dir: docs/overrides
+
+extra_css:
+  - stylesheets/malmo-stad-colors.css
 
 plugins:
   - search
@@ -58,11 +62,14 @@ markdown_extensions:
 nav:
   - Hem: index.md
   - RFI-Material:
-    - RFI-dokumentation: rfi-rfp/rfi-material.md
-    - Systemlandskap: systems/system-landscape-rfi.md
-    - Kravspecifikation: rfi-rfp/requirements-list.md
-    - Frågor till leverantörer: rfi-rfp/supplier-questions.md
-    - Utvärderingskriterier: rfi-rfp/evaluation-criteria.md
+    - RFI-dokumentation: rfi-rfp/rfi-material-new.md
+    - Vision och målbild: rfi-rfp/vision-og-malbildsverk.md
+    - Organisation och lagkrav: rfi-rfp/organizational-context.md
+    - RFI - Verksamhetssystem: rfi-rfp/rfi-verksamhetssystem.md
+    - Systemlandskap: systems/system-landscape-rfi-optimized.md
+    - Behov och förutsättningar: rfi-rfp/needs-basis-new.md
+    - Frågor till leverantörer: rfi-rfp/supplier-questions-new.md
+    - Frågor - Molntjänster och compliance: rfi-rfp/cloud-and-compliance-questions.md
   - Verksamhet:
     - Verksamhetsbeskrivning: overview/verksamhetsbeskrivning.md
     - Organisationsstruktur: overview/organisation.md
