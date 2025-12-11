@@ -83,6 +83,9 @@ nav:
       - Integrationsöversikt: diagrams/architecture/integration-detailed.md
     - Dataflöden:
       - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
+    - Processöversikter:
+      - Larmcentral-process: diagrams/process/larmcentral.md
+      - Vård & Omsorg-process: diagrams/process/vard-omsorg.md
   - System (Kategori):
     - Centrala System: systems/02-system/centrala-system/README.md
     - Molntjänster: systems/02-system/molntjanster/README.md
@@ -97,6 +100,10 @@ nav:
     - Ordlista: overview/glossary.md
     - Arkitekturprinciper: overview/architecture-principles.md
     - Kontakt: about/contact.md
+    - För redigerare:
+      - Hur man arbetar: overview/how-to-work.md
+      - Dokumentationsguide: about/documentation.md
+      - Design Style Guide: overview/design-style-guide.md
 
 extra:
   social:
