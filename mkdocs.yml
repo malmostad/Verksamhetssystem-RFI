@@ -9,8 +9,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: images/malmo-stad-logo-colour.png
-  favicon: images/malmo-stad-logo.png
+  logo: images/Malmostad_logo2025_vertical_neg_RGB.png
+  favicon: images/malmo-stad-logo-colour.png
   palette:
     - scheme: default
       primary: custom
@@ -40,6 +40,9 @@ theme:
 extra_css:
   - stylesheets/malmo-stad-colors.css
 
+extra_javascript:
+  - javascripts/mermaid.mjs
+
 plugins:
   - search
 
@@ -47,7 +50,9 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -61,56 +66,23 @@ markdown_extensions:
 
 nav:
   - Hem: index.md
-  - RFI-Material:
-    - RFI-dokumentation: rfi-rfp/rfi-material-new.md
-    - Vision och målbild: rfi-rfp/vision-og-malbildsverk.md
-    - Organisation och lagkrav: rfi-rfp/organizational-context.md
-    - RFI - Verksamhetssystem: rfi-rfp/rfi-verksamhetssystem.md
-    - Systemlandskap: systems/system-landscape-rfi-optimized.md
-    - Behov och förutsättningar: rfi-rfp/needs-basis-new.md
-    - Frågor till leverantörer: rfi-rfp/supplier-questions-new.md
-    - Frågor - Molntjänster och compliance: rfi-rfp/cloud-and-compliance-questions.md
-  - Verksamhet:
-    - Verksamhetsbeskrivning: overview/verksamhetsbeskrivning.md
-    - Organisationsstruktur: overview/organisation.md
-    - Kärnprocesser:
-      - Processer - Översikt: processes/core-processes/overview.md
-      - Larmhantering: processes/core-processes/case-management.md
-      - Vårdhantering: processes/core-processes/follow-up.md
-      - Personalhantering: processes/core-processes/onboarding.md
-  - Teknik & Integration:
-    - Systemöversikt: systems/system-landscape.md
-    - Systemkatalog: systems/systemkatalog.md
-    - Digitaliseringsstrategi: systems/digitaliseringsstrategi.md
-    - Integrationer: systems/integrations.md
-    - Masterdata: systems/masterdata.md
-    - Arkitekturdiagram:
-      - Kritikalitet: diagrams/architecture/kritikalitet.md
-      - Autentisering & Säkerhet: diagrams/architecture/autentisering.md
-      - Integrationsöversikt: diagrams/architecture/integration-detailed.md
-    - Dataflöden:
-      - Masterdata-flöde: diagrams/data-flows/masterdata-flow.md
-    - Processöversikter:
-      - Larmcentral-process: diagrams/process/larmcentral.md
-      - Vård & Omsorg-process: diagrams/process/vard-omsorg.md
-  - System (Kategori):
-    - Centrala System: systems/02-system/centrala-system/README.md
-    - Molntjänster: systems/02-system/molntjanster/README.md
-    - Applikationer: systems/02-system/applikationer/README.md
-    - Tjänster: systems/02-system/tjanster/README.md
-    - Övriga System: systems/02-system/ovriga-system/README.md
-  - Analyser:
-    - Gap-analys: analyses/gap-analysis.md
-    - Pain Points: analyses/pain-points.md
-    - Riskanalys: analyses/risk-analysis.md
+  - Verksamhet & organisation:
+    - Översikt & statistik: organisation/organisation.md
+    - Verksamhetsbeskrivning: organisation/verksamhetsbeskrivning.md
+    - Vision och målbild: organisation/vision-malbild.md
+    - Lagkrav vård och omsorg: organisation/lagkrav-vard-omsorg.md
+  - RFI-material:
+    - Översikt: rfi-material/rfi-overview.md
+    - Utmaningar: rfi-material/utmaningar.md
+    - Behov: rfi-material/requirements.md
+    - Frågor: rfi-material/questions.md
+  - System:
+    - Systemkontext: system/systemkontext.md
+    - IT-miljö: system/it-miljo.md
+    - Systemkarta: system/system-landscape.md
   - Referens:
     - Ordlista: overview/glossary.md
     - Arkitekturprinciper: overview/architecture-principles.md
-    - Kontakt: about/contact.md
-    - För redigerare:
-      - Hur man arbetar: overview/how-to-work.md
-      - Dokumentationsguide: about/documentation.md
-      - Design Style Guide: overview/design-style-guide.md
 
 extra:
   social:
