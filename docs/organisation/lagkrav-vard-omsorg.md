@@ -18,7 +18,9 @@ Systemet ska stödja intentionerna i lagstiftningen och möjliggöra efterlevnad
 
 Nedan följer korta avsnitt per lagområde samt hur de påverkar verksamhetssystemet.
 
-## Sammanfattning: Fyra lagstiftningar – en systemarkitektur
+## Sammanfattning: Centrala lagkrav och systemarkitektur
+
+Mindmappen nedan fokuserar på de tre tvärgående regelverken **NIS 2**, **OSL 10 kap. 2a §** och **GDPR** som i första hand styr den tekniska arkitekturen. **SoL**, **HSL** och **Patientlagen** beskrivs i efterföljande avsnitt som verksamhetsnära bakgrund och kontext.
 
 ```mermaid
 --8<-- "diagrams/lagkrav-mindmap.mmd"
