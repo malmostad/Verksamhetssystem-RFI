@@ -1,4 +1,4 @@
-# Verksamhetsbeskrivning - HVOF (RFI-översikt)
+# Verksamhetsbeskrivning och vision - HVOF
 
 ## Översikt
 
@@ -34,7 +34,25 @@ HVOF ansvarar för insatser som riktar sig till:
    - Vårdplanering
    - Samordnad vård
 
-## Verksamhetsområden (kortfattat)
+## Vision och målbild för nytt verksamhetssystem
+
+### Syfte med nytt verksamhetssystem
+- Samla vård- och omsorgsinformation i ett sammanhållet system för HVOF:s målgrupper: äldre, vuxna med fysisk funktionsnedsättning och vuxna med somatisk sjukdom.
+- Ge bättre stöd för handläggning, journalföring, uppföljning och samverkan tvärs roller och verksamhetsområden.
+- Minska beroenden till fragmenterade lösningar (57 system i dag) och skapa en tydlig master för vårddata.
+
+### Övergripande målbild
+- Ett modernt, användbart verksamhetssystem som stödjer hela vård- och omsorgsprocessen från beslut till utförande och uppföljning.
+- Säker och spårbar informationshantering, med förvaltningsgemensamma principer för behörighet och loggning.
+- Integrationer mot centrala system (t.ex. journal, tid/insats, larm) hanteras via tydliga gränssnitt snarare än punkt-till-punkt-kopplingar.
+- Flexibelt för framtida förändringar i lagstiftning, arbetssätt och välfärdsteknik.
+
+### Förväntade effekter
+- **Verksamhet**: Kortare ledtider, färre felkällor och bättre uppföljning av kvalitet och produktion.
+- **Medarbetare**: Enklare arbetssätt med färre inloggningar, mindre dubbelregistrering och stöd för mobilt arbete.
+- **Brukare/patienter**: Ökad kontinuitet, trygghet och delaktighet genom sammanhållen information och bättre samverkan.
+
+## Verksamhetsområden
 
 1. **Myndighetsutövning**  
    Avdelning för myndighet ansvarar för handläggning enligt SoL, beslut, verkställighet och uppföljning.
@@ -54,7 +72,7 @@ HVOF ansvarar för insatser som riktar sig till:
 6. **Välfärdsteknik**  
    Utför installation, service och avinstallation av välfärdstekniska tjänster såsom trygghetslarm, digitala lås, kameratillsyn och trygghetssensorer.
 
-## Stabsfunktioner (översikt)
+## Stabsfunktioner
 
 - **HR-avdelning** – Stöd till chefer och medarbetare inom HR-området.
 - **Ekonomiavdelning** – Ekonomistyrning, budget, uppföljning och inköpssamordning.
@@ -62,7 +80,7 @@ HVOF ansvarar för insatser som riktar sig till:
 - **Strategisk utvecklingsavdelning** – Strategisk planering och utvecklingsarbete.
 - **Avdelning för digital utveckling och lokaler** – Digitalisering, välfärdsteknik och lokalfrågor.
 
-## Kärnprocesser (översikt)
+## Kärnprocesser
 
 1. **Handläggning (SoL, LSS)**  
    Myndighetsutövning, beslut, verkställighet och uppföljning.
@@ -82,7 +100,8 @@ HVOF ansvarar för insatser som riktar sig till:
 ## Relaterade dokument
 
 - [Organisationsöversikt och statistik](organisation.md)
-- [Systemlandskap](../system/system-landscape.md)
+- [Systemkontext](../system/systemkontext.md) för nulägets integrationer och system som påverkas
+- [Behov](../rfi-material/behov-och-fragor.md) och [Frågor](../rfi-material/fragor.md) i RFI-materialet för detaljerad dialog med leverantörer
 
 **Malmö stad | Hälsa, Vård och Omsorg (HVOF)**
 

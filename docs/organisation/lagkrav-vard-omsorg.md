@@ -1,10 +1,43 @@
-# Lagkrav som styr HVOF:s vård och omsorg (översikt)
+# Lagkrav som styr HVOF:s vård och omsorg
 
 Denna RFI ger en översikt över lagkrav som påverkar utformningen av verksamhetssystemet. Texten är förenklad för att ge leverantörer en tydlig bild av kontexten – inte en fullständig juridisk genomgång.
 
 Systemet ska stödja intentionerna i lagstiftningen och möjliggöra efterlevnad genom bra funktioner, spårbarhet och säkerhet.
 
 ## Snabböversikt: Tre lagstiftningar – en arkitektur
+
+```markmap
+---
+markmap:
+  direction: 1
+---
+- Lagkrav för Verksamhetssystem
+  - NIS 2 / Cybersäkerhet
+    - Incidenthantering
+    - Kontinuitetsplanering
+    - Sårbarhetshantering
+    - Åtkomstkontroll
+      - MFA
+      - RBAC
+      - Loggning
+    - Kryptering
+      - Transit TLS 1.2+
+      - At Rest AES-256
+  - OSL - Offentlighet & Sekretess
+    - 10 kap 2a § Special regel
+    - Datakontroll
+    - Underleverantörer
+    - Säkerhetsorganisation
+    - Tystnadsplikt
+  - GDPR - Dataskydd
+    - Rätten till åtkomst
+    - Rätten till radering
+    - Portabilitet
+    - DPIA-process
+    - DPA-avtal
+```
+
+---
 
 !!! info "Tre lagar – ett verksamhetssystem"
     Verksamhetssystemet behöver uppfylla krav från **cybersäkerhet**, **offentlighet och sekretess** och **dataskydd** samtidigt.  

@@ -171,7 +171,6 @@ graph LR
 
 ## 🔗 Läs mer
 
-- 🗺️ [Systemlandskap](../systems/system-landscape.md)
-- 📊 [Integrationskarta](../systems/integrations.md)
-- 🔴 [Pain Points](../analyses/pain-points.md)
-- 📈 [Gap-analys](../analyses/gap-analysis.md)
+- 🗺️ [Systemöversikt](../system/system-landscape.md)
+- 📋 [RFI-Översikt](../rfi-material/rfi-overview.md)
+- 📋 [Behov](../rfi-material/behov-och-fragor.md) och [Frågor](../rfi-material/fragor.md)

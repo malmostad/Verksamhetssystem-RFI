@@ -91,25 +91,6 @@ HVOF använder 57 system som kategoriseras i 5 huvudgrupper:
 | IT-ärenden | MSM (Marval) | - |
 | Fastigheter | Lime CRM | - |
 
-## Kritikalitet
-
-### Kritiska System (24/7 drift)
-- 3CX - Telefonväxel
-- Interview (ISM) - Larmmottagning
-- Lifecare-Procapita - Journal/Vård
-- CMP - Trygghetslarm administration
-
-### Hög prioritet
-- HRutan - Personal
-- Ekot - Ekonomi
-- Freja eID - Inloggning
-- NPÖ - Patientöversikt
-
-### Medel prioritet
-- MSM - Ärendehantering
-- Kuben - Tidsplanering
-- Milestone - Kameralarm
-
 ## Systemägare och Kontakter
 
 Se detaljerad dokumentation per system i `02-system/` för:

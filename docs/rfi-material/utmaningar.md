@@ -5,21 +5,24 @@
 
 HVOF står inför flera utmaningar i nuvarande systemlandskap som vi hoppas att ett nytt verksamhetssystem kan adressera. Figuren nedan visar de viktigaste områdena – detaljer följer i efterföljande avsnitt.
 
-```mermaid
-mindmap
-  root((Utmaningar))
-    "Fragmenterad arkitektur"
-      "Många system"
-      "Punkt‑till‑punkt‑integrationer"
-    "Säkerhet"
-      "Många inloggningar"
-      "Splittrad behörighet"
-    "Analytik"
-      "Data på flera ställen"
-      "Svårt med helhetsbild"
-    "Utvecklingstakt"
-      "Flera system att ändra"
-      "Långsamma leveranser"
+```markmap
+---
+markmap:
+  direction: 1
+---
+- Utmaningar
+  - Fragmenterad arkitektur
+    - Många system
+    - Punkt‑till‑punkt‑integrationer
+  - Säkerhet
+    - Många inloggningar
+    - Splittrad behörighet
+  - Analytik
+    - Data på flera ställen
+    - Svårt med helhetsbild
+  - Utvecklingstakt
+    - Flera system att ändra
+    - Långsamma leveranser
 ```
 
 ### Fragmenterad arkitektur

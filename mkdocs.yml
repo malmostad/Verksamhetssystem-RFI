@@ -45,6 +45,7 @@ extra_javascript:
 
 plugins:
   - search
+  - markmap
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -68,18 +69,18 @@ nav:
   - Hem: index.md
   - Verksamhet & organisation:
     - Översikt & statistik: organisation/organisation.md
-    - Verksamhetsbeskrivning: organisation/verksamhetsbeskrivning.md
-    - Vision och målbild: organisation/vision-malbild.md
+    - Verksamhetsbeskrivning och vision: organisation/verksamhetsbeskrivning.md
     - Lagkrav vård och omsorg: organisation/lagkrav-vard-omsorg.md
   - RFI-material:
     - Översikt: rfi-material/rfi-overview.md
     - Utmaningar: rfi-material/utmaningar.md
-    - Behov: rfi-material/requirements.md
-    - Frågor: rfi-material/questions.md
+    - Behov: rfi-material/behov-och-fragor.md
+    - Frågor: rfi-material/fragor.md
   - System:
     - Systemkontext: system/systemkontext.md
     - IT-miljö: system/it-miljo.md
     - Systemkarta: system/system-landscape.md
+    - Nuvarande verksamhetssystem (Lifecare/Procapita): arkitektur/lifecare-procapita.md
   - Referens:
     - Ordlista: overview/glossary.md
     - Arkitekturprinciper: overview/architecture-principles.md

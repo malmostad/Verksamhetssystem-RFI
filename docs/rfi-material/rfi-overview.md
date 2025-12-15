@@ -16,8 +16,8 @@ För att få en komplett bild av våra behov och utmaningar, rekommenderar vi f�
 2. **[Systemkontext](../system/systemkontext.md)** - Förstå systemlandskapet och integrationer (10 min)
 3. **[IT-miljö](../system/it-miljo.md)** - Läs om IT-utmaningar och integrationsutmaningar (10 min)
 4. **[Utmaningar](utmaningar.md)** - Identifierade utmaningar och scope (5 min)
-5. **[Behov](requirements.md)** - Funktionella och stödjande behov (15 min)
-6. **[Frågor](questions.md)** - Besvara frågor till leverantörer (60-90 min)
+5. **[Behov](behov-och-fragor.md)** - Funktionella behov (15 min)
+6. **[Frågor](fragor.md)** - Frågor till leverantörer (60-90 min)
 
 ---
 
@@ -33,8 +33,7 @@ Ett nytt verksamhetssystem ska fungera som centralt system för vårdhantering, 
 - **[Systemkontext](../system/systemkontext.md)** - Systemkontext, integrationer och system som byts
 - **[IT-miljö](../system/it-miljo.md)** - IT-miljö och utmaningar
 - **[Utmaningar](utmaningar.md)** - Identifierade utmaningar och scope
-- **[Behov](requirements.md)** - Funktionella och stödjande behov
-- **[Frågor](questions.md)** - Frågor till leverantörer att besvara
+- **[Behov och frågor](behov-och-fragor.md)** - Funktionella behov och frågor till leverantörer
 
 ---
 
