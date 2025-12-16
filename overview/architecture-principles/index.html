@@ -27,7 +27,7 @@
     
     
       
-        <title>Arkitekturprinciper - RFI - Verksamhetssystemet för HVOF</title>
+        <title>[Protected] Arkitekturprinciper - RFI - Verksamhetssystemet för HVOF</title>
       
     
     
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arkitekturprinciper
+              [Protected] Arkitekturprinciper
             
           </span>
         </div>
@@ -277,7 +277,7 @@
   
     
   
-  Hem
+  [Protected] Hem
 
       </a>
     </li>
@@ -424,7 +424,7 @@
   <span class="md-ellipsis">
     
   
-    Hem
+    [Protected] Hem
   
 
     
@@ -505,7 +505,7 @@
   <span class="md-ellipsis">
     
   
-    Översikt & statistik
+    [Protected] Översikt & statistik
   
 
     
@@ -533,7 +533,7 @@
   <span class="md-ellipsis">
     
   
-    Verksamhetsbeskrivning och vision
+    [Protected] Verksamhetsbeskrivning och vision
   
 
     
@@ -561,7 +561,7 @@
   <span class="md-ellipsis">
     
   
-    Lagkrav vård och omsorg
+    [Protected] Lagkrav vård och omsorg
   
 
     
@@ -907,7 +907,7 @@
   <span class="md-ellipsis">
     
   
-    Nuvarande verksamhetssystem (Lifecare/Procapita)
+    [Protected] Nuvarande verksamhetssystem (Lifecare/Procapita)
   
 
     
@@ -1036,7 +1036,7 @@
   <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -1054,7 +1054,7 @@
   <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -1461,329 +1461,33 @@
   
 
 
-<h1 id="arkitekturprinciper">🏗️ Arkitekturprinciper</h1>
-<h2 id="vad-ar-detta">🎯 Vad är detta?</h2>
-<p>!!! note "Definition"
-    Dessa principer styr hur vi designar, bygger och förvaltar systemarkitekturen inom HVOF för att säkerställa flexibilitet, säkerhet och framtida tillväxt.</p>
-<pre class="mermaid"><code>graph TB
-    API["🔌 API-First"]
-    Masterdata["📊 Masterdata"]
-    Standard["⚙️ Standard"]
-    Säkerhet["🔐 Säkerhet"]
-    Dokumentation["📚 Dokumentation"]
-    Skalbarhet["📈 Skalbarhet"]
-    Användare["👤 Användarfokus"]
-    Förbättring["🔄 Kontinuerlig"]
-
-    API --&gt; Integration["Flexibla integrationer"]
-    Masterdata --&gt; Kvalitet["God datakvalitet"]
-    Standard --&gt; Kostnad["Låga kostnader"]
-    Säkerhet --&gt; Skydd["GDPR &amp; Säkerhet"]
-    Dokumentation --&gt; Förståelse["Tydlighet"]
-    Skalbarhet --&gt; Tillväxt["Framtida behov"]
-    Användare --&gt; Adoption["Högt värde"]
-    Förbättring --&gt; Relevans["Håller sig aktuell"]</code></pre>
-<hr/>
-<h2 id="princip-1-api-first">🔌 Princip 1: API-First</h2>
-<table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Beskrivning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mål</strong></td>
-<td>Alla system ska exponera funktionalitet via API:er</td>
-</tr>
-<tr>
-<td><strong>Fördelar</strong></td>
-<td>Möjliggör integrationer, underlättar systembyte, stödjer framtiden</td>
-</tr>
-<tr>
-<td><strong>Implementering</strong></td>
-<td>Nya system kräver API:er; befintliga migreras</td>
-</tr>
-</tbody>
-</table>
-<div style="background-color: #E8F5E9; border-left: 4px solid #4CAF50; padding: 12px; margin: 12px 0;">
-<strong>✅ Resultat:</strong> Flexibel systemarkitektur som inte blir låst till en leverantör
+<div id="mkdocs-encrypted-content" style="display:none">08oeus89uTjMLPImxpTx/w==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<hr/>
-<h2 id="princip-2-masterdata-princip">📊 Princip 2: Masterdata-princip</h2>
-<table>
-<thead>
-<tr>
-<th>Datadomän</th>
-<th>Master System</th>
-<th>Ansvarig</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>👥 Personal</td>
-<td>HRutan</td>
-<td>HR-avdelning</td>
-</tr>
-<tr>
-<td>🏥 Vårddata</td>
-<td>Lifecare-Procapita</td>
-<td>IT-verksamhet</td>
-</tr>
-<tr>
-<td>💰 Ekonomi</td>
-<td>Ekot</td>
-<td>Ekonomi</td>
-</tr>
-<tr>
-<td>🚨 Larmdata</td>
-<td>Interview/ISM</td>
-<td>Larmnav</td>
-</tr>
-</tbody>
-</table>
-<p>!!! info "Datakvalitet"
-    Genom att definiera ett master per domän, undviker vi datadubbletter och säkerställer konsistens</p>
-<hr/>
-<h2 id="princip-3-standard-fore-special">⚙️ Princip 3: Standard före Special</h2>
-<table>
-<thead>
-<tr>
-<th>Område</th>
-<th>Standard</th>
-<th>Alternativ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🩺 Sjukvårdsdata</td>
-<td>HL7</td>
-<td>Proprietary format</td>
-</tr>
-<tr>
-<td>🔌 Integrationer</td>
-<td>REST API</td>
-<td>SOAP, File transfer</td>
-</tr>
-<tr>
-<td>🔐 Autentisering</td>
-<td>Freja eID, SITHS</td>
-<td>Lokalt AD</td>
-</tr>
-<tr>
-<td>📊 BI-verktyg</td>
-<td>Qlikview</td>
-<td>Powerpoint reports</td>
-</tr>
-</tbody>
-</table>
-<div style="background-color: #FFF3E0; border-left: 4px solid #FF9800; padding: 12px; margin: 12px 0;">
-<strong>💡 Fördelar:</strong> Lägre kostnad, enklare underhål,  bättre leverantörsuppgift
-</div>
-<hr/>
-<h2 id="princip-4-sakerhet-by-design">🔐 Princip 4: Säkerhet by Design</h2>
-<p>!!! warning "Säkerhet först"
-    Säkerhet ska vara inbyggd från början, inte tillagd efteråt</p>
-<table>
-<thead>
-<tr>
-<th>Område</th>
-<th>Implementering</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🔐 <strong>Autentisering</strong></td>
-<td>SITHS för vårddata, Freja eID för SSO</td>
-</tr>
-<tr>
-<td><strong>Tvåfaktor</strong></td>
-<td>Implementerat för känsliga system</td>
-</tr>
-<tr>
-<td><strong>Kryptering</strong></td>
-<td>TLS för överföring, AES för lagring</td>
-</tr>
-<tr>
-<td><strong>Loggning</strong></td>
-<td>Full spårbarhet av åtkomst</td>
-</tr>
-<tr>
-<td><strong>GDPR</strong></td>
-<td>PII-skydd, dataminimering</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="princip-5-dokumentation-transparens">📚 Princip 5: Dokumentation &amp; Transparens</h2>
-<p>!!! success "Denna dokumentationsplattform"
-    Alla system och integrationer ska vara dokumenterade för att underlätta förståelse och systembyte</p>
-<p><strong>Omfattning</strong>:
-- ✅ Systemdokumentation för alla 57 system
-- ✅ Integrationdiagram och dataflöden
-- ✅ Processöversikter
-- ✅ Kontakt- och ansvarsinformation</p>
-<hr/>
-<h2 id="princip-6-skalbarhet-prestanda">📈 Princip 6: Skalbarhet &amp; Prestanda</h2>
-<table>
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Målbild</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📊 <strong>Belastning</strong></td>
-<td>Stödjer 2x nuvarande volymer</td>
-</tr>
-<tr>
-<td>⏱️ <strong>Svarstider</strong></td>
-<td>&lt;500ms för normala operationer</td>
-</tr>
-<tr>
-<td>🔴 <strong>Kritiska</strong></td>
-<td>&lt;100ms för larmhantering</td>
-</tr>
-<tr>
-<td>📈 <strong>Tillväxt</strong></td>
-<td>Cloud-baserad för flexibilitet</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="princip-7-anvandarcentrerad-design">👤 Princip 7: Användarcentrerad Design</h2>
-<table>
-<thead>
-<tr>
-<th>Fokus</th>
-<th>Tillvägagångssätt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🎤 <strong>Input</strong></td>
-<td>Regelbundna användarintervjuer</td>
-</tr>
-<tr>
-<td>🧪 <strong>Testning</strong></td>
-<td>Användaracceptanstestning (UAT)</td>
-</tr>
-<tr>
-<td>📣 <strong>Feedback</strong></td>
-<td>Kontinuerlig feedback-samling</td>
-</tr>
-<tr>
-<td>🎯 <strong>Mål</strong></td>
-<td>Högt värde för verksamheten</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="princip-8-kontinuerlig-forbattring">🔄 Princip 8: Kontinuerlig Förbättring</h2>
-<pre class="mermaid"><code>graph LR
-    A["📋 Granska"] --&gt; B["🎯 Identifiera"]
-    B --&gt; C["🔧 Implementera"]
-    C --&gt; D["✅ Validera"]
-    D --&gt; A
 
-    style A fill:#42A5F5,color:#FFF
-    style B fill:#66BB6A,color:#FFF
-    style C fill:#FFA726,color:#FFF
-    style D fill:#EF5350,color:#FFF</code></pre>
-<p>!!! note "Livscykel"
-    Systemarkitekturen utvecklas kontinuerligt baserat på feedback, nya behov och teknikskiften</p>
-<hr/>
-<h2 id="implementeringsoversikt">📅 Implementeringsöversikt</h2>
-<h3 id="kort-sikt-0-1-ar">🟢 Kort sikt (0-1 år)</h3>
-<table>
-<thead>
-<tr>
-<th>Fokus</th>
-<th>Aktivitet</th>
-<th>Effekt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🔐 Autentisering</td>
-<td>Expandera Freja eID</td>
-<td>🔴 Kritisk</td>
-</tr>
-<tr>
-<td>🔌 API</td>
-<td>Förbättra täckning</td>
-<td>🔴 Kritisk</td>
-</tr>
-<tr>
-<td>📚 Dokumentation</td>
-<td>Dokumentera integrationer</td>
-<td>🟡 Medel</td>
-</tr>
-</tbody>
-</table>
-<h3 id="medellang-sikt-1-3-ar">🟡 Medellång sikt (1-3 år)</h3>
-<table>
-<thead>
-<tr>
-<th>Fokus</th>
-<th>Aktivitet</th>
-<th>Effekt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🔄 Modernisering</td>
-<td>Uppdatera kritiska system</td>
-<td>🔴 Kritisk</td>
-</tr>
-<tr>
-<td>📊 Masterdata</td>
-<td>Automatisera överföringar</td>
-<td>🔴 Kritisk</td>
-</tr>
-<tr>
-<td>🚪 Gateway</td>
-<td>Implementera API-gateway</td>
-<td>🟡 Medel</td>
-</tr>
-</tbody>
-</table>
-<h3 id="lang-sikt-3-ar">🔵 Lång sikt (3+ år)</h3>
-<table>
-<thead>
-<tr>
-<th>Fokus</th>
-<th>Aktivitet</th>
-<th>Effekt</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>☁️ Cloud</td>
-<td>Molnbaserad arkitektur</td>
-<td>🔴 Kritisk</td>
-</tr>
-<tr>
-<td>🔹 Microservices</td>
-<td>Där lämpligt</td>
-<td>🟡 Medel</td>
-</tr>
-<tr>
-<td>🤖 AI/ML</td>
-<td>Processoptimering</td>
-<td>🟢 Låg</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="las-mer">🔗 Läs mer</h2>
-<ul>
-<li>🗺️ <a href="../../system/system-landscape/">Systemöversikt</a></li>
-<li>📋 <a href="../../rfi-material/rfi-overview/">RFI-Översikt</a></li>
-<li>📋 <a href="../../rfi-material/behov-och-fragor/">Behov</a> och <a href="../../rfi-material/fragor/">Frågor</a></li>
-</ul>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Verksamhetssystem-RFI/overview/architecture-principles/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["yH6zG0IBk+uK3j/Ad8rLnA==;duZpCzEAbgXBwh9hJqcEhV3FyVnRDKgCnmR6nY+Ot7ID4oW6/ORXL2CT7wyYUBCb/bOWvm7Ti5a7fCRpCfmG8VrCdh/8+SqZQEwSFByVEnlLkJMRoUVDPPZlThfuaJhS;92rYUUXwU+6+AbFOwvCHYA=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
@@ -1822,22 +1526,6 @@
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
-    </a>
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://github.com/malmostad/Verksamhetssystem-RFI" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>

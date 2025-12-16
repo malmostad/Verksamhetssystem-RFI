@@ -29,7 +29,7 @@
     
     
       
-        <title>Frågor - RFI - Verksamhetssystemet för HVOF</title>
+        <title>[Protected] Frågor - RFI - Verksamhetssystemet för HVOF</title>
       
     
     
@@ -160,7 +160,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Frågor
+              [Protected] Frågor
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   
     
   
-  Hem
+  [Protected] Hem
 
       </a>
     </li>
@@ -426,7 +426,7 @@
   <span class="md-ellipsis">
     
   
-    Hem
+    [Protected] Hem
   
 
     
@@ -507,7 +507,7 @@
   <span class="md-ellipsis">
     
   
-    Översikt & statistik
+    [Protected] Översikt & statistik
   
 
     
@@ -535,7 +535,7 @@
   <span class="md-ellipsis">
     
   
-    Verksamhetsbeskrivning och vision
+    [Protected] Verksamhetsbeskrivning och vision
   
 
     
@@ -563,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Lagkrav vård och omsorg
+    [Protected] Lagkrav vård och omsorg
   
 
     
@@ -711,7 +711,7 @@
   <span class="md-ellipsis">
     
   
-    Behov
+    [Protected] Behov
   
 
     
@@ -748,7 +748,7 @@
   <span class="md-ellipsis">
     
   
-    Frågor
+    [Protected] Frågor
   
 
     
@@ -766,7 +766,7 @@
   <span class="md-ellipsis">
     
   
-    Frågor
+    [Protected] Frågor
   
 
     
@@ -1157,7 +1157,7 @@
   <span class="md-ellipsis">
     
   
-    Nuvarande verksamhetssystem (Lifecare/Procapita)
+    [Protected] Nuvarande verksamhetssystem (Lifecare/Procapita)
   
 
     
@@ -1246,7 +1246,7 @@
   <span class="md-ellipsis">
     
   
-    Ordlista
+    [Protected] Ordlista
   
 
     
@@ -1274,7 +1274,7 @@
   <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -1539,347 +1539,33 @@
   
 
 
-<h1 id="fragor-till-leverantorer">Frågor till leverantörer</h1>
-<h2 id="malmo-stad-halsa-vard-och-omsorg-hvof">Malmö stad | Hälsa, Vård och Omsorg (HVOF)</h2>
-<p>!!! info "RFI-format"
-    Detta är en informationsinsamling. Svaren hjälper oss att bedöma er lösnings lämplighet för en framtida RFP.</p>
-<hr/>
-<h2 id="1-arkitektur-och-integration">1. Arkitektur och integration</h2>
-<p><strong>Våra behov</strong>: Vi har ett komplext systemlandskap med många system och behöver standardiserade API:er för integration.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Beskriv er lösningsarkitektur – vilka komponenter och integrationspunkter ingår?</li>
-<li>Vilka API:er exponerar systemet? (REST, SOAP, GraphQL, gRPC?)</li>
-<li>Stödjer systemet HL7 FHIR-standard för vårddata?</li>
-<li>Hur säkerställer ni datakvalité vid integrationspunkter?</li>
-<li>Kan vi övervaka integrationer i realtid?</li>
-<li>Vilka säkerhetsstandarder använder ni för API-kommunikation? (OAuth2, mTLS, etc.)</li>
-</ol>
-<hr/>
-<h2 id="2-datamigration-fran-lifecare-procapita">2. Datamigration från Lifecare-Procapita</h2>
-<p><strong>Våra behov</strong>: Vi måste migrera historisk data från befintliga system med bibehållen datakvalitet.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Har ni erfarenhet av att migrera från verksamhetssystem för äldreomsorg?</li>
-<li>Vilka datatyper kan systemet ta emot? (Journaler, vårddokument, tidsstämplar, relationer?)</li>
-<li>Hur hanterar ni historiska data och ändringsloggar?</li>
-<li>Kan ni bevara systemrelationer och kopplingar mellan data?</li>
-<li>Vilken validering och datakvalitetskontroll gör ni under migration?</li>
-<li>Ungefärlig tid för datamigration för vår datamängd?</li>
-</ol>
-<hr/>
-<h2 id="3-autentisering-och-atkomstkontroll">3. Autentisering och åtkomstkontroll</h2>
-<p><strong>Våra behov</strong>: Vi använder Freja eID och e-SITHS för autentisering av användare och sjukvårdspersonal.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Stödjer systemet Freja eID-inloggning via SSO?</li>
-<li>Stödjer systemet e-SITHS för sjukvårdspersonal?</li>
-<li>Hur hanterar systemet rollbaserad åtkomst (RBAC)?</li>
-<li>Vilka andra autentiseringsmetoder stödjer ni? (LDAP, SAML, OAuth2?)</li>
-<li>Hur loggar och granskar ni åtkomstförsök? (GDPR-spårning)</li>
-</ol>
-<hr/>
-<h2 id="4-sakerhet-dataskydd-och-regelefterlevnad">4. Säkerhet, dataskydd och regelefterlevnad</h2>
-<p><strong>Våra behov</strong>: Vi hanterar känslig hälso- och personaldata. GDPR-efterlevnad, patientintegritet och datasäkerhet är kritiska.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Vilka säkerhetscertifieringar har systemet? (ISO 27001, SOC 2, annat?)</li>
-<li>Var lagras data geografiskt? (Föredraget: Sverige eller EU)</li>
-<li>Vilka backup- och disaster recovery-procedurer är etablerade?</li>
-<li>Hur implementerar ni rätten till radering enligt GDPR?</li>
-<li>Finns databehandlaravtal (DPA) tillgängliga för svenska kommuner?</li>
-<li>Vilken kryptering använder systemet? (I transit och at rest)</li>
-<li>Hur ofta genomför ni säkerhetsgranskning/penetrationstester?</li>
-<li>Vilken process finns för rapportering av säkerhetshändelser?</li>
-</ol>
-<hr/>
-<h2 id="5-prestanda-och-skalbarhet">5. Prestanda och skalbarhet</h2>
-<p><strong>Våra behov</strong>: Systemet måste stödja vår verksamhets omfattning med flera samtidiga användare under toppbelastning.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Hur många samtidiga användare kan systemet hantera?</li>
-<li>Vad är genomsnittlig svarstid för normala operationer?</li>
-<li>Vad är systemets maximala belastningskapacitet?</li>
-<li>Vilken tillgänglighet (SLA) erbjuder ni? (99,5%, 99,9%, 99,99%?)</li>
-<li>Hur hanterar ni databasskalning vid växande användarantal?</li>
-<li>Vilken redundans och failover-strategi har systemet? (Multi-region? Hot standby?)</li>
-</ol>
-<hr/>
-<h2 id="6-rapportering-affarsanalys-och-data">6. Rapportering, affärsanalys och data</h2>
-<p><strong>Våra behov</strong>: Vi behöver verksamhetsöversikt, statistik och möjlighet att koppla till nationella register.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Vilka rapporter kan systemet generera från starten?</li>
-<li>Kan vi bygga egna rapporter? (Vilka verktyg och möjligheter?)</li>
-<li>Hur exponerar systemet data för BI-system? (Vi använder idag Qlikview/Qlik)</li>
-<li>Stödjer systemet dataexport? (CSV, Excel, API?)</li>
-<li>Vilka verksamhetstal kan vi följa i realtid?</li>
-<li>Kan systemet integrera med nationella register för Socialstyrelsens rapportering?</li>
-</ol>
-<hr/>
-<h2 id="7-support-underhall-och-fortsatt-utveckling">7. Support, underhåll och fortsatt utveckling</h2>
-<p><strong>Våra behov</strong>: Systemet måste underhållas under många år med regelbundna uppdateringar, säkerhetsuppdateringar och ny funktionalitet.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Vilken supportnivå erbjuder ni? (24/7? Kontorstid?)</li>
-<li>Vad är svarsnivåerna för kritiska problem? (1 timme? 4 timmar?)</li>
-<li>Hur ofta uppdateras systemet? (Varje månad? Varje kvartal?)</li>
-<li>Vilka nya funktioner är på er produktroadmap för nästa 2 år?</li>
-<li>Hur garanterar ni backward-kompatibilitet vid systemuppdateringar?</li>
-<li>Kan vi påverka er produktutveckling? (Feature requests och prioritering?)</li>
-<li>Vilken produktsupport garanteras långsiktigt? (Till 2030? 2035?)</li>
-</ol>
-<hr/>
-<h2 id="8-implementeringstidsplan-och-projektoversikt">8. Implementeringstidsplan och projektöversikt</h2>
-<p><strong>Våra behov</strong>: Vi behöver ungefärlig tidsplan för att planera internt.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Vilken totaltid uppskattar ni för implementering? (Från avtal till go-live)</li>
-<li>Hur många resurser krävs från vår sida? (Antal personer och tidsomfattning)</li>
-<li>Vilka huvudmilstolpar föreslår ni för projektet?</li>
-<li>Vilken tid krävs för datamigration och testning?</li>
-<li>Kan ni implementera enligt denna tidsplan parallellt med andra systembyte?</li>
-<li>Vilka risker identifierar ni och hur mitigerar ni dem?</li>
-<li>Kan vi göra en pilot/test innan full rollout?</li>
-<li>Vilken parallell drifttid behövs? (Veckor? Månader?)</li>
-</ol>
-<hr/>
-<h2 id="9-molntjanster-och-hostingmodell-for-saas-losningar">9. Molntjänster och hostingmodell (för SaaS-lösningar)</h2>
-<p><strong>Våra behov</strong>: Vi behöver förstå molninfrastruktur, datalagring och kostnadsstruktur för SaaS-lösningar.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li><strong>Var lagras data geografiskt och under vilka juridiska ramverk?</strong></li>
-<li>Fysisk datacentersplats: Vilka länder använder ni för datalagrering? (Vi kräver Sverige eller EU)</li>
-<li>Redundans: Var befinner sig backups och disaster recovery-miljöer geografiskt?</li>
-<li>Juridisk jurisdiktion: Under vilken jurisdiktion regleras databehandlingen?</li>
-<li>Ägande av datacentret: Ägs datacentret av er eller av en tredjepartsoperatör?</li>
-<li>Underleverantörer: Kan data hamna hos tredjepartsoperatörer eller molnleverantörer utanför EU?</li>
-<li>
-<p>Gränsövervakningsmöjlighet: Kan Malmö stad övervaka att data inte överförs till tredje länder?</p>
-</li>
-<li>
-<p><strong>Vilken SaaS-modell använder ni och vad är licensieringsmodellen?</strong></p>
-</li>
-<li>Delning av data: Kan Malmö stads data komma att lagras tillsammans med andra kunders data?</li>
-<li>Isolering: Vilka tekniska åtgärder säkerställer att våra data är åtskilda?</li>
-<li>Kostnadsmodell: Licensering per användare, per system, per GB data, eller något annat?</li>
-<li>Hidden costs: Vilka tilläggskostnader kan komma? (API-anrop, datalagring, support, uppdateringar)</li>
-<li>
-<p>Kostnadsövervakning: Kan vi se i realtid vad vi använder och vad som kommer att kosta?</p>
-</li>
-<li>
-<p><strong>Tillgänglighet och Service Level Agreement (SLA)</strong></p>
-</li>
-<li>Systemtillgänglighet: Vad är er garanterad SLA? (Uptime procent, planerat underhåll)</li>
-<li>Incidentrespons: Vad är er svarsprocedur när systemet är nere? (RTO, RPO)</li>
-<li>Backup och disaster recovery: Hur ofta säkerhetskopieras data? Var lagras backups?</li>
-<li>Eskalering: Hur hanteras kritiska problem? (Kontaktperson 24/7, supportlinjer på svenska)</li>
-<li>Kompensation: Vad kompenserar ni om SLA-nivån missgynnas?</li>
-</ol>
-<hr/>
-<h2 id="10-cybersakerhetslagen-nis-2-obligatoriska-sakerhetskrav">10. Cybersäkerhetslagen (NIS 2) - Obligatoriska säkerhetskrav</h2>
-<p><strong>Våra behov</strong>: Cybersäkerhetslagen kräver att vi kan verifiera säkerheten. Vi behöver dokumenterat bevis från oberoende revisorer.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li><strong>Säkerhetscertifieringar och tredjepartsrapporter</strong></li>
-<li>SOC 2 Type II: Har ni en aktuell rapport? (Max 12 månader gammal, från Big 4 rekommenderas)</li>
-<li>ISO 27001: Är ni certifierade? Giltigt till när? Bifoga Statement of Applicability (SoA)</li>
-<li>ISO 27018: Har ni certifiering för skydd av personuppgifter i molnet?</li>
-<li>Personalsäkerhet: Genomgår all personal säkerhetsvetting? Finns sekretessavtal?</li>
-<li>
-<p>Penetrationstest: Utför ni årliga penetrationstester av externa säkerhetstestare?</p>
-</li>
-<li>
-<p><strong>Kryptering enligt Cybersäkerhetslagen</strong></p>
-</li>
-<li>Kryptering i transit: Vilken protokoll använder ni? (TLS 1.2 minimum, helst 1.3)</li>
-<li>Kryptering at rest: Är all patientdata krypterad vid lagring? (AES-256 rekommenderas)</li>
-<li>Nyckelhantering: <strong>Kan vi lagra och kontrollera våra egna krypteringsnycklar?</strong> (KRITISK för OSL)</li>
-<li>
-<p>Prestanda: Märker användare någon prestandapåverkan från krypteringen?</p>
-</li>
-<li>
-<p><strong>Incidenthantering och kontinuitetshantering</strong></p>
-</li>
-<li>Incidenthantering: Har ni en dokumenterad policy? Maximal tid till svar? (&lt; 1 timme för kritiska)</li>
-<li>Kontinuitetshantering: Vad är RTO och RPO? (Målvärde: RTO &lt; 4 timmar, RPO &lt; 1 timme)</li>
-<li>Kommunikation vid incident: Vad är maximal tid före meddelande? (&lt; 24 timmar)</li>
-</ol>
-<hr/>
-<h2 id="11-offentlighet-och-sekretesslagen-osl-dataskyddskrav">11. Offentlighet- och Sekretesslagen (OSL) - Dataskyddskrav</h2>
-<p><strong>Våra behov</strong>: OSL förbjuder att sekretessbelagd information delas med tredje parter om de inte är rent tekniska databearbetare utan eget inflytande.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li><strong>Åtkomst till data - vem kan läsa Malmö stads information?</strong></li>
-<li>Direktanställda: Vilka anställda har åtkomst? Omfattas de av sekretessavtal?</li>
-<li>Underleverantörer: Vilka underleverantörer har åtkomst? Lista namn, land, typ av tillgång</li>
-<li>Moderbolag: Har moderbolaget åtkomst till våra data?</li>
-<li>
-<p>Geografisk spridning: I vilka länder kan personal läsa våra data? (Vi kräver endast Sverige eller EU)</p>
-</li>
-<li>
-<p><strong>Datalagrering och dataisolering</strong></p>
-</li>
-<li>Samlokalisering: Lagras våra data tillsammans med andra kunders data i samma databas?</li>
-<li>Dataisolering: Vilka tekniska åtgärder säkerställer att våra data är åtskilda?</li>
-<li>Riskanalys: Finns risk att andra kunders administratörer kan läsa våra data?</li>
-<li>
-<p>Regulatory compliance: Omfattas er SaaS-miljö av granskning eller certifiering?</p>
-</li>
-<li>
-<p><strong>Säkerhetsmål för OSL-kompatibilitet</strong></p>
-</li>
-<li>Kryptering vid lagring: AES-256 eller motsvarande?</li>
-<li>Kryptering i transit: TLS 1.2+?</li>
-<li>Åtkomstkontroll: Multi-factor autentisering?</li>
-<li>Loggning av åtkomst: All åtkomst loggad?</li>
-<li>Brandvägg och nätverk: IP-whitelist, VPN?</li>
-<li>Personalsäkerhet: Säkerhetsvetting av personal?</li>
-</ol>
-<hr/>
-<h2 id="12-gdpr-och-dataskydd">12. GDPR och dataskydd</h2>
-<p><strong>Våra behov</strong>: Vi är personuppgiftsansvarig enligt GDPR och behöver garantier för dataskydd.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Erbjuder ni ett Datbehandlaravtal (Data Processing Agreement)?</li>
-<li>Godkänner ni att vi genomför en GDPR-konsekvensbedömning (DPIA)?</li>
-<li>Godkänner ni att vi granskar er säkerhet regelbundet?</li>
-<li>Hur implementerar ni rätten till radering enligt GDPR?</li>
-<li>Hur implementerar ni rätten till dataportabilitet?</li>
-</ol>
-<hr/>
-<h2 id="13-integrationer-och-kostnadsmodell">13. Integrationer och kostnadsmodell</h2>
-<p><strong>Våra behov</strong>: Vi har många integrationer och behöver förstå er integrationsstrategi och kostnadsmodell.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Vilka API:er exponerar systemet? (REST? GraphQL? SOAP? HL7?)</li>
-<li>Dokumentation tillgänglig? (Länk?)</li>
-<li>Realtids-API eller endast batch-API?</li>
-<li>Kostnadsmodell för integrationer: Ingår i baslicensen eller separat kostnadsmodell?</li>
-<li>Begränsningar: Finns maximal gräns för API-anrop per dag/timme?</li>
-<li>Kan ni ge exempel på kostnadsberäkning för vår integrationsmiljö?</li>
-</ol>
-<hr/>
-<h2 id="14-utdataplattform-och-bi-atkomst">14. Utdataplattform och BI-åtkomst</h2>
-<p><strong>Våra behov</strong>: Vi använder idag Qlikview för BI och behöver kunna extrahera data från systemet.</p>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>Kan vi få åtkomst till data för rapportering? Via vilka metoder? (SQL-frågor? API? Export?)</li>
-<li>I vilket format får vi data? (CSV? JSON? SQL-resultat?)</li>
-<li>Hur aktuell är data? (Realtid? Daglig uppdatering?)</li>
-<li>Ingår utdataplattformen i baslicensen eller finns separat kostnadsmodell?</li>
-<li>Kan vi ansluta Qlikview direkt till er API/utdataplattform?</li>
-</ol>
-<hr/>
-<h2 id="15-sammanfattning-kan-ni-uppfylla-alla-lagkrav">15. Sammanfattning - Kan ni uppfylla alla lagkrav?</h2>
-<p><strong>Frågor</strong>:</p>
-<ol>
-<li>
-<p><strong>Cybersäkerhetslagen (NIS 2)</strong>: Bekräfta att systemet kan uppfylla alla obligatoriska riskhanteringsåtgärder. Lista vilka ni redan uppfyller, vilka ni kan uppfylla med konfiguration, och vilka ni INTE kan uppfylla (om några).</p>
-</li>
-<li>
-<p><strong>Offentlighet- och Sekretesslagen (OSL)</strong>: Bekräfta att vi kan tillämpa 10 kap 2a § OSL med er tjänst. Bekräfta att vi kan dekryptera känslig data utan er hjälp. Bekräfta att okrypterad data INTE är tillgänglig för er personal eller underleverantörer.</p>
-</li>
-<li>
-<p><strong>GDPR och dataskydd</strong>: Erbjuder ni ett Datbehandlaravtal (Data Processing Agreement)? Godkänner ni att vi genomför en GDPR-konsekvensbedömning (DPIA)? Godkänner ni att vi granskar er säkerhet regelbundet?</p>
-</li>
-<li>
-<p><strong>Övergripande lämplighet</strong>: Baserat på denna informationsinsamling: Anser ni att er lösning passar för Malmö stad? Vilka är eventuella begränsningar eller utmaningar ni ser? Vad krävs från Malmö stad för att implementeringen ska lyckas?</p>
-</li>
-</ol>
-<hr/>
-<h2 id="svarformat-obligatorisk-information">Svarformat - Obligatorisk information</h2>
-<p>Vi förväntar att er RFI-svar innehåller följande information:</p>
-<table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Instruktion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Leverantörsnamn</strong></td>
-<td>Organisationens officiella namn</td>
-</tr>
-<tr>
-<td><strong>Kontaktperson</strong></td>
-<td>Namn, e-postadress, telefon för uppföljning</td>
-</tr>
-<tr>
-<td><strong>Svarsdatum</strong></td>
-<td>Datum då svaret skickas</td>
-</tr>
-<tr>
-<td><strong>Produktnamn och version</strong></td>
-<td>Systemets officiella beteckning</td>
-</tr>
-<tr>
-<td><strong>Följsamhetsstatus</strong></td>
-<td>RFI-kompatibel (Ja / Nej / Delvis)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Instruktioner för svar per fråga</strong>:
-- Maximalt 2-5 stycken per fråga
-- Använd tabeller och listor för tydlighet
-- Bifoga gärna exempel, skärmdumpar och dokumentreferenser
-- Ange källan eller referensen för varje påstående</p>
-<hr/>
-<h2 id="dokumentation-vi-forvantar-fran-leverantorer">Dokumentation vi förväntar från leverantörer</h2>
-<p>Bifoga följande dokument tillsammans med svaren:</p>
-<table>
-<thead>
-<tr>
-<th>Dokument</th>
-<th>Förklaring</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SOC 2 Type II-rapport</strong></td>
-<td>Från oberoende revisor, max 12 mån gammal</td>
-</tr>
-<tr>
-<td><strong>ISO 27001-certifikat</strong></td>
-<td>Med Statement of Applicability (SoA)</td>
-</tr>
-<tr>
-<td><strong>Datbehandlaravtal (DPA)</strong></td>
-<td>Enligt GDPR</td>
-</tr>
-<tr>
-<td><strong>Säkerhetspolicy</strong></td>
-<td>Informationssäkerhetspolicy</td>
-</tr>
-<tr>
-<td><strong>Incidenthanteringspolicy</strong></td>
-<td>Dokumenterad process</td>
-</tr>
-<tr>
-<td><strong>Kontinuitetsplan</strong></td>
-<td>Med RTO/RPO-mål</td>
-</tr>
-<tr>
-<td><strong>Prislista</strong></td>
-<td>Transparent kostnadsmodell</td>
-</tr>
-<tr>
-<td><strong>API-dokumentation</strong></td>
-<td>För integrationer</td>
-</tr>
-<tr>
-<td><strong>Teknisk arkitektur</strong></td>
-<td>För kryptering, dataisolering, etc.</td>
-</tr>
-<tr>
-<td><strong>Referenskunder</strong></td>
-<td>Med kontaktuppgifter</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<p><strong>Malmö stad | Hälsa, Vård och Omsorg (HVOF)</strong></p>
+<div id="mkdocs-encrypted-content" style="display:none">8HZYuWKzWeU80J8ssSVYBA==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Verksamhetssystem-RFI/rfi-material/fragor/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["yH6zG0IBk+uK3j/Ad8rLnA==;duZpCzEAbgXBwh9hJqcEhV3FyVnRDKgCnmR6nY+Ot7ID4oW6/ORXL2CT7wyYUBCb/bOWvm7Ti5a7fCRpCfmG8VrCdh/8+SqZQEwSFByVEnlLkJMRoUVDPPZlThfuaJhS;92rYUUXwU+6+AbFOwvCHYA=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
@@ -1918,22 +1604,6 @@
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
-    </a>
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://github.com/malmostad/Verksamhetssystem-RFI" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>

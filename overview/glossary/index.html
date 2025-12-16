@@ -29,7 +29,7 @@
     
     
       
-        <title>Ordlista - RFI - Verksamhetssystemet för HVOF</title>
+        <title>[Protected] Ordlista - RFI - Verksamhetssystemet för HVOF</title>
       
     
     
@@ -160,7 +160,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ordlista
+              [Protected] Ordlista
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   
     
   
-  Hem
+  [Protected] Hem
 
       </a>
     </li>
@@ -426,7 +426,7 @@
   <span class="md-ellipsis">
     
   
-    Hem
+    [Protected] Hem
   
 
     
@@ -507,7 +507,7 @@
   <span class="md-ellipsis">
     
   
-    Översikt & statistik
+    [Protected] Översikt & statistik
   
 
     
@@ -535,7 +535,7 @@
   <span class="md-ellipsis">
     
   
-    Verksamhetsbeskrivning och vision
+    [Protected] Verksamhetsbeskrivning och vision
   
 
     
@@ -563,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Lagkrav vård och omsorg
+    [Protected] Lagkrav vård och omsorg
   
 
     
@@ -909,7 +909,7 @@
   <span class="md-ellipsis">
     
   
-    Nuvarande verksamhetssystem (Lifecare/Procapita)
+    [Protected] Nuvarande verksamhetssystem (Lifecare/Procapita)
   
 
     
@@ -1010,7 +1010,7 @@
   <span class="md-ellipsis">
     
   
-    Ordlista
+    [Protected] Ordlista
   
 
     
@@ -1028,7 +1028,7 @@
   <span class="md-ellipsis">
     
   
-    Ordlista
+    [Protected] Ordlista
   
 
     
@@ -1459,7 +1459,7 @@
   <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -1909,62 +1909,33 @@
   
 
 
-<h1 id="ordlista">Ordlista</h1>
-<h2 id="systemtermer">Systemtermer</h2>
-<h3 id="masterdata">Masterdata</h3>
-<p>Data som är auktoritativ källa för information inom en datadomän. Exempel: Personaldata i HRutan, Vårddata i Lifecare-Procapita.</p>
-<h3 id="sso-single-sign-on">SSO (Single Sign-On)</h3>
-<p>Enkel inloggning - användare loggar in en gång och får tillgång till flera system.</p>
-<h3 id="api-application-programming-interface">API (Application Programming Interface)</h3>
-<p>Gränssnitt mellan system för datautbyte.</p>
-<h3 id="integration">Integration</h3>
-<p>Koppling mellan två eller flera system för datautbyte eller funktionalitet.</p>
-<h2 id="autentisering">Autentisering</h2>
-<h3 id="freja-eid">Freja eID</h3>
-<p>Säker inloggningsmetod med LOA 2/3 (Level of Assurance) som stödjer SSO.</p>
-<h3 id="siths">SITHS</h3>
-<p>Säker IT i Hälso- och Sjukvården - inloggningsmetod med kort och PIN för vårddata.</p>
-<h3 id="ad-active-directory">AD (Active Directory)</h3>
-<p>Microsofts katalogtjänst för användarhantering och autentisering.</p>
-<h2 id="systemkategorier">Systemkategorier</h2>
-<h3 id="centrala-system">Centrala System</h3>
-<p>Kritiska system som stödjer verksamhetens kärnfunktioner. Exempel: HRutan, Lifecare-Procapita, Ekot.</p>
-<h3 id="molntjanster">Molntjänster</h3>
-<p>System som körs i molnet (SaaS). Exempel: CMP, Kuben, Guardtools.</p>
-<h3 id="applikationer">Applikationer</h3>
-<p>Specifika applikationer för specifika uppgifter. Exempel: Mobilt e-Siths, SITHS admin.</p>
-<h3 id="tjanster">Tjänster</h3>
-<p>Externa tjänster och system. Exempel: NPÖ, Pascal, MCSS.</p>
-<h2 id="processer">Processer</h2>
-<h3 id="karnprocess">Kärnprocess</h3>
-<p>Huvudprocess som stödjer verksamhetens primära uppdrag. Exempel: Larmhantering, Vårdhantering.</p>
-<h3 id="stodprocess">Stödprocess</h3>
-<p>Process som stödjer kärnprocesser. Exempel: Personalhantering, IT-support.</p>
-<h2 id="data">Data</h2>
-<h3 id="master-system">Master System</h3>
-<p>System som är auktoritativ källa (master) för en datadomän.</p>
-<h3 id="sekundart-system">Sekundärt System</h3>
-<p>System som tar emot data från master system.</p>
-<h3 id="dataagare">Dataägare</h3>
-<p>Organisation eller roll som ansvarar för datakvalitet och datapolicy.</p>
-<h2 id="tekniska-termer">Tekniska termer</h2>
-<h3 id="batch">Batch</h3>
-<p>Dataöverföring som sker i satser (t.ex. dagligen).</p>
-<h3 id="realtid">Realtid</h3>
-<p>Dataöverföring som sker omedelbart.</p>
-<h3 id="hl7">HL7</h3>
-<p>Standard för datautbyte inom hälso- och sjukvården.</p>
-<h3 id="gdpr">GDPR</h3>
-<p>General Data Protection Regulation - dataskyddsförordning.</p>
-<h2 id="kritikalitet">Kritikalitet</h2>
-<h3 id="kritisk">Kritisk</h3>
-<p>System som måste vara tillgängliga 24/7 med minimal nedtid (&lt; 1 timme).</p>
-<h3 id="hog-prioritet">Hög prioritet</h3>
-<p>System som är viktiga för daglig drift med nedtid &lt; 4 timmar.</p>
-<h3 id="medel-prioritet">Medel prioritet</h3>
-<p>Viktiga stödsystem med nedtid &lt; 24 timmar.</p>
-<h3 id="lag-prioritet">Låg prioritet</h3>
-<p>Stödsystem med nedtid &lt; 48 timmar.</p>
+<div id="mkdocs-encrypted-content" style="display:none">KGSoYg2ws9UOx+VADGV7WQ==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Verksamhetssystem-RFI/overview/glossary/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["yH6zG0IBk+uK3j/Ad8rLnA==;duZpCzEAbgXBwh9hJqcEhV3FyVnRDKgCnmR6nY+Ot7ID4oW6/ORXL2CT7wyYUBCb/bOWvm7Ti5a7fCRpCfmG8VrCdh/8+SqZQEwSFByVEnlLkJMRoUVDPPZlThfuaJhS;92rYUUXwU+6+AbFOwvCHYA=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
@@ -2003,22 +1974,6 @@
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
-    </a>
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-      
-      
-    
-    <a href="https://github.com/malmostad/Verksamhetssystem-RFI" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
