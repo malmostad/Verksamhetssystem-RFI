@@ -46,6 +46,11 @@ extra_javascript:
 plugins:
   - search
   - markmap
+  - encryptcontent:
+      global_password: !ENV [ENCRYPTCONTENT_PASSWORD, 'set-this-env-var']
+
+
+
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -85,7 +90,4 @@ nav:
     - Ordlista: overview/glossary.md
     - Arkitekturprinciper: overview/architecture-principles.md
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/malmostad/Verksamhetssystem-RFI
+extra: {}
