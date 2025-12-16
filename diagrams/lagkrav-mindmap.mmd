@@ -1,0 +1,26 @@
+---
+config:
+  theme: neo
+  layout: tidy-tree
+---
+graph LR
+  A["Lagkrav för verksamhetssystem"]
+
+  A --> NIS["NIS 2 / Cybersäkerhet"]
+  A --> OSL["OSL 10 kap. 2a §"]
+  A --> GDPR["GDPR – Dataskydd"]
+
+  %% NIS 2 – grupperat för bättre läsbarhet
+  NIS --> N1["Incident- och<br/>kontinuitetshantering"]
+  NIS --> N2["Åtkomstkontroll<br/>(MFA, RBAC, loggning)"]
+  NIS --> N3["Kryptering<br/>(TLS 1.2+, AES-256)"]
+
+  %% OSL
+  OSL --> O1["Datakontroll<br/>och nycklar"]
+  OSL --> O2["Underleverantörer<br/>och säkerhetsorganisation"]
+  OSL --> O3["Tystnadsplikt"]
+
+  %% GDPR
+  GDPR --> G1["Rätt till åtkomst<br/>och radering"]
+  GDPR --> G2["Portabilitet<br/>och DPIA"]
+  GDPR --> G3["Personuppgiftsbiträdesavtal<br/>(DPA)"]

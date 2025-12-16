@@ -1,0 +1,415 @@
+/* 
+ * Malmö stad - Official Color Palette
+ * Stadsgrön som primärfärg enligt visuell identitet
+ * Applied to Material Theme
+ */
+
+/* Stadsgrön (Main) - #01351C - Primärfärg enligt Malmö stads visuella identitet */
+:root {
+  /* Stadsgrön - Official primary color */
+  --md-primary-fg-color: #01351C;
+  --md-primary-fg-color--light: #024D2E;
+  --md-primary-fg-color--dark: #001F13;
+  
+  /* Grön - Secondary green */
+  --md-primary-bg-color: #6EAA5B;
+  --md-accent-fg-color: #6EAA5B;
+  
+  /* Mellangrön - Tertiary */
+  --md-tertiary-fg-color: #9ABEAA;
+  
+  /* Ljusgrön - Light variant */
+  --md-light-green: #D1E0D7;
+}
+
+/* Light scheme (default) - Stadsgrön som primärfärg */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #01351C;
+  --md-primary-fg-color--light: #024D2E;
+  --md-primary-fg-color--dark: #001F13;
+  --md-accent-fg-color: #6EAA5B;
+  --md-typeset-a-color: #6EAA5B;
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #1a1a1a;
+}
+
+/* Dark scheme (slate) - Anpassad för mörkt tema med stadsgrön accent */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #6EAA5B;
+  --md-primary-fg-color--light: #9ABEAA;
+  --md-primary-fg-color--dark: #01351C;
+  --md-accent-fg-color: #9ABEAA;
+  --md-typeset-a-color: #9ABEAA;
+  --md-default-bg-color: #1e1e1e;
+  --md-default-fg-color: #e0e0e0;
+}
+
+/* Header styling - Mörk bakgrund för vit logga */
+.md-header {
+  background-color: #01351C;
+  color: white;
+}
+
+.md-header__button {
+  color: white;
+}
+
+/* Top navigation tabs */
+.md-tabs {
+  background-color: #01351C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-tabs__link {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+.md-tabs__link:hover {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+.md-tabs__link--active {
+  color: #ffffff !important;
+  opacity: 1;
+  border-bottom-color: #6EAA5B;
+}
+
+/* Dark theme tabs */
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #01351C;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #ffffff !important;
+  opacity: 1;
+  border-bottom-color: #6EAA5B;
+}
+
+/* Logo styling för vit logga på mörk bakgrund */
+.md-header__button--logo {
+  filter: brightness(0) invert(1); /* Säkerställer att loggan är vit */
+}
+
+.md-header__button img {
+  max-height: 2.4rem;
+}
+
+/* Sidebar and navigation */
+.md-sidebar {
+  background-color: #f5f5f5;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: #1e1e1e;
+}
+
+.md-sidebar__scrollwrap {
+  margin-top: 0;
+}
+
+.md-sidebar__inner {
+  padding-top: 0;
+}
+
+/* Navigation title (top of sidebar) */
+.md-nav__title {
+  background-color: #01351C;
+  border-bottom: 2px solid #6EAA5B;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.md-nav__title .md-nav__button {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.md-nav__title .md-nav__button.md-logo {
+  margin-right: 0.6rem;
+  padding: 0;
+}
+
+.md-nav__title .md-nav__button.md-logo img,
+.md-nav__title .md-nav__button.md-logo svg {
+  height: 1.8rem;
+  width: auto;
+  margin: 0;
+  filter: brightness(0) invert(1);
+}
+
+/* Navigation source (GitHub link) */
+.md-nav__source {
+  background-color: #f5f5f5;
+  border-top: 1px solid #D1E0D7;
+  border-bottom: 1px solid #D1E0D7;
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source {
+  background-color: #252525;
+  border-top-color: #3a3a3a;
+  border-bottom-color: #3a3a3a;
+}
+
+.md-nav__source .md-source {
+  color: #01351C;
+}
+
+.md-nav__source .md-source__icon {
+  color: #01351C;
+}
+
+.md-nav__source .md-source__repository {
+  color: #01351C;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.md-nav__source .md-source__fact {
+  color: #6EAA5B;
+  font-size: 0.7rem;
+}
+
+.md-nav__source a {
+  color: #01351C;
+  text-decoration: none;
+}
+
+.md-nav__source a:hover {
+  color: #6EAA5B;
+}
+
+.md-nav__source a:hover .md-source__repository {
+  color: #6EAA5B;
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] .md-nav__title {
+  background-color: #01351C;
+  border-bottom-color: #6EAA5B;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title .md-nav__button {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source {
+  background-color: #252525;
+  border-top-color: #3a3a3a;
+  border-bottom-color: #3a3a3a;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source .md-source,
+[data-md-color-scheme="slate"] .md-nav__source .md-source__icon,
+[data-md-color-scheme="slate"] .md-nav__source .md-source__repository {
+  color: #9ABEAA;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source .md-source__fact {
+  color: #6EAA5B;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source a {
+  color: #9ABEAA;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source a:hover {
+  color: #6EAA5B;
+}
+
+[data-md-color-scheme="slate"] .md-nav__source a:hover .md-source__repository {
+  color: #6EAA5B;
+}
+
+.md-nav__link--active {
+  border-left-color: #6EAA5B;
+  color: #01351C;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  border-left-color: #6EAA5B;
+  color: #9ABEAA;
+}
+
+.md-nav__link:hover {
+  color: #6EAA5B;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: #e0e0e0;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: #6EAA5B;
+}
+
+/* Navigation list items in dark mode */
+[data-md-color-scheme="slate"] .md-nav__item {
+  color: #e0e0e0;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link {
+  color: #e0e0e0;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link:hover {
+  color: #6EAA5B;
+  background-color: rgba(110, 170, 91, 0.1);
+}
+
+/* Secondary navigation (Table of Contents) */
+.md-nav--secondary .md-nav__title {
+  color: #01351C;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.md-nav--secondary .md-nav__link {
+  color: #1a1a1a;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: #6EAA5B;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: #01351C;
+  border-left-color: #6EAA5B;
+}
+
+/* Nested navigation in dark mode */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
+  color: #e0e0e0;
+  background-color: #1e1e1e;
+  border-bottom-color: #3a3a3a;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link {
+  color: #b0b0b0;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
+  color: #9ABEAA;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
+  color: #9ABEAA;
+  border-left-color: #6EAA5B;
+}
+
+/* Buttons and highlights */
+.md-button {
+  background-color: #6EAA5B;
+  color: white;
+  border-color: #01351C;
+}
+
+.md-button:hover {
+  background-color: #01351C;
+  color: white;
+}
+
+/* Code blocks */
+.highlight {
+  background-color: #f5f5f5;
+  border-left: 4px solid #6EAA5B;
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-left-color: #6EAA5B;
+}
+
+.md-typeset .admonition.info {
+  background-color: #f0f5f1;
+  border-left-color: #6EAA5B;
+}
+
+.md-typeset .admonition.note {
+  background-color: #f0f5f1;
+  border-left-color: #9ABEAA;
+}
+
+/* Table styling */
+.md-typeset table {
+  border-collapse: collapse;
+}
+
+.md-typeset table tbody tr:hover {
+  background-color: #f0f5f1;
+}
+
+/* Links */
+.md-typeset a {
+  color: #6EAA5B;
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: #01351C;
+  text-decoration: underline;
+}
+
+/* Card-like elements (divs with border) */
+.md-card {
+  border: 1px solid #D1E0D7;
+  border-left: 4px solid #6EAA5B;
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  /* Färgteman för noder och linjer */
+  --primary-color: #6EAA5B;           /* Nodhuvud / viktiga element */
+  --primary-text-color: #01351C;      /* Textfärg i noder */
+  --primary-border-color: #01351C;    /* Kantfärg runt noder */
+  --line-color: #9ABEAA;              /* Linjer mellan noder */
+  --secondary-color: #D1E0D7;         /* Bakgrund i noder */
+  --tertiary-color: #f0f5f1;
+}
+
+/* Tunnare, renare linjer i alla diagram */
+/* Tunnare linjer i Mermaid-diagram (överskriver inline-stroke) */
+.mermaid svg path,
+.mermaid svg g path,
+.mermaid svg .edgePath path {
+  stroke-width: 1px !important;
+}
+
+/* Kanter mellan noder (edges) – färg + tunnare */
+.mermaid .edgePath path {
+  stroke: var(--line-color) !important;
+}
+
+/* Noder (rutor/cirklar i t.ex. mindmap & flowchart) */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node path {
+  fill: var(--secondary-color);
+  stroke: var(--primary-border-color);
+  stroke-width: 1px;
+}
+
+.mermaid .node text {
+  fill: var(--primary-text-color);
+  font-size: 0.85rem;
+}

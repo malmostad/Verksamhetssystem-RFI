@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <style>
+    :root {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    [data-md-color-scheme="default"] {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    [data-md-color-scheme="slate"] {
+      --md-primary-fg-color: #01351C;
+      --md-primary-fg-color--light: #01532E;
+      --md-primary-fg-color--dark: #012414;
+      --md-accent-fg-color: #01351C;
+    }
+    
+    /* Logo styling for navbar */
+    .md-header__logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 8px;
+    }
+    
+    .md-header__logo img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    /* Logo on light theme - show colored version */
+    [data-md-color-scheme="default"] .md-header__logo img {
+      filter: none;
+    }
+    
+    /* Logo on dark theme - keep colored version */
+    [data-md-color-scheme="slate"] .md-header__logo img {
+      filter: none;
+    }
+  </style>
+{% endblock %}
+
