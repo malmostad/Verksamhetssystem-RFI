@@ -12,29 +12,48 @@ markmap:
   direction: 1
 ---
 - Lagkrav för Verksamhetssystem
-  - NIS 2 / Cybersäkerhet
-    - Incidenthantering
-    - Kontinuitetsplanering
-    - Sårbarhetshantering
-    - Åtkomstkontroll
-      - MFA
-      - RBAC
-      - Loggning
-    - Kryptering
-      - Transit TLS 1.2+
-      - At Rest AES-256
-  - OSL - Offentlighet & Sekretess
-    - 10 kap 2a § Special regel
-    - Datakontroll
-    - Underleverantörer
-    - Säkerhetsorganisation
-    - Tystnadsplikt
-  - GDPR - Dataskydd
-    - Rätten till åtkomst
-    - Rätten till radering
-    - Portabilitet
-    - DPIA-process
-    - DPA-avtal
+  - Verksamhetsnära lagar
+    - SoL - Socialtjänstlagen
+      - Trygghet och goda levnadsförhållanden
+      - Rättssäker handläggningskedja
+      - Dokumentation och spårbarhet
+      - Uppföljning och rapportering
+    - HSL - Hälso- och sjukvårdslagen
+      - God vård och patientsäkerhet
+      - Strukturerad journalföring
+      - Vårdplaner
+      - Säker informationsdelning
+    - Patientlagen
+      - Rätt till information och delaktighet
+      - Informerat samtycke
+      - Spårbarhet av åtkomst och ändringar
+  - Teknik & Säkerhet
+    - NIS 2 / Cybersäkerhet
+      - Incidenthantering
+      - Kontinuitetsplanering
+      - Sårbarhetshantering
+      - Åtkomstkontroll
+        - MFA
+        - RBAC
+        - Loggning
+      - Kryptering
+        - Transit TLS 1.2+
+        - At Rest AES-256
+      - Säkerhetsorganisation
+  - Kontroll & Sekretess
+    - OSL - Offentlighet & Sekretess
+      - 10 kap 2a § Special regel
+      - Datakontroll
+      - Underleverantörer
+      - Säkerhetsorganisation
+      - Tystnadsplikt
+    - GDPR - Dataskydd
+      - Rätten till åtkomst
+      - Rätten till radering
+      - Rätten till dataportabilitet
+      - DPIA-process
+      - DPA-avtal
+      - Spårbarhet och dokumentation
 ```
 
 ---
@@ -49,15 +68,9 @@ markmap:
 | **Offentlighet- och sekretesslagen (OSL 10 kap. 2a §)** | Hantering av sekretessbelagd information (t.ex. journaler) | Malmö stad ska ha kontroll över data och nycklar, leverantören är teknisk databearbetare | Säkerställa att arkitektur, åtkomst och underleverantörer följer principen om teknisk databearbetning |
 | **Dataskyddsförordningen (GDPR)** | All personuppgiftsbehandling | Stödja registrerades rättigheter, laglig grund, gallring och spårbarhet | Vara personuppgiftsbiträde med tydliga avtal, processer och tekniskt stöd i systemet |
 
-Nedan följer korta avsnitt per lagområde samt hur de påverkar verksamhetssystemet.
+## Verksamhetsnära lagstiftning
 
-## Sammanfattning: Centrala lagkrav och systemarkitektur
-
-Mindmappen nedan fokuserar på de tre tvärgående regelverken **NIS 2**, **OSL 10 kap. 2a §** och **GDPR** som i första hand styr den tekniska arkitekturen. **SoL**, **HSL** och **Patientlagen** beskrivs i efterföljande avsnitt som verksamhetsnära bakgrund och kontext.
-
-```mermaid
---8<-- "diagrams/lagkrav-mindmap.mmd"
-```
+Nedan följer korta avsnitt om hur **SoL**, **HSL** och **Patientlagen** styr verksamhetssystemets funktioner och design.
 
 ## Socialtjänstlagen (SoL)
 
