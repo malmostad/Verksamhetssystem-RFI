@@ -29,7 +29,7 @@
     
     
       
-        <title>IT-miljö - RFI - Verksamhetssystemet för HVOF</title>
+        <title>[Protected] IT-miljö - RFI - Verksamhetssystemet för HVOF</title>
       
     
     
@@ -160,7 +160,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IT-miljö
+              [Protected] IT-miljö
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   
     
   
-  Hem
+  [Protected] Hem
 
       </a>
     </li>
@@ -426,7 +426,7 @@
   <span class="md-ellipsis">
     
   
-    Hem
+    [Protected] Hem
   
 
     
@@ -507,7 +507,7 @@
   <span class="md-ellipsis">
     
   
-    Översikt & statistik
+    [Protected] Översikt & statistik
   
 
     
@@ -535,7 +535,7 @@
   <span class="md-ellipsis">
     
   
-    Verksamhetsbeskrivning och vision
+    [Protected] Verksamhetsbeskrivning och vision
   
 
     
@@ -563,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Lagkrav vård och omsorg
+    [Protected] Lagkrav vård och omsorg
   
 
     
@@ -652,7 +652,7 @@
   <span class="md-ellipsis">
     
   
-    Översikt
+    [Protected] Översikt
   
 
     
@@ -680,7 +680,7 @@
   <span class="md-ellipsis">
     
   
-    Utmaningar
+    [Protected] Utmaningar
   
 
     
@@ -708,7 +708,7 @@
   <span class="md-ellipsis">
     
   
-    Behov
+    [Protected] Behov
   
 
     
@@ -736,7 +736,7 @@
   <span class="md-ellipsis">
     
   
-    Frågor
+    [Protected] Frågor
   
 
     
@@ -865,7 +865,7 @@
   <span class="md-ellipsis">
     
   
-    IT-miljö
+    [Protected] IT-miljö
   
 
     
@@ -883,7 +883,7 @@
   <span class="md-ellipsis">
     
   
-    IT-miljö
+    [Protected] IT-miljö
   
 
     
@@ -1025,7 +1025,7 @@
   <span class="md-ellipsis">
     
   
-    Nuvarande verksamhetssystem (Lifecare/Procapita)
+    [Protected] Nuvarande verksamhetssystem (Lifecare/Procapita)
   
 
     
@@ -1114,7 +1114,7 @@
   <span class="md-ellipsis">
     
   
-    Ordlista
+    [Protected] Ordlista
   
 
     
@@ -1142,7 +1142,7 @@
   <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -1275,196 +1275,33 @@
   
 
 
-<h1 id="it-miljo">IT-miljö</h1>
-<h2 id="malmo-stad-halsa-vard-och-omsorg-hvof">Malmö stad | Hälsa, Vård och Omsorg (HVOF)</h2>
-<p>HVOF:s IT-miljö kännetecknas av en komplex blandning av nationella, regionala och lokala applikationer som kräver olika inloggningsförfaranden och autentiseringsmetoder. Våra medarbetare använder många olika applikationer för delar av verksamhetsprocesser.</p>
-<h2 id="blandning-av-applikationstyper">Blandning av applikationstyper</h2>
-<p>Systemlandskapet består av en heterogen mix av applikationer från olika nivåer som används för olika delar av verksamhetsprocesser.</p>
-<p><strong>Nationella system</strong> kräver specifika autentiseringsmetoder och integrationer enligt nationella standarder. Dessa system är kritiska för verksamheten och måste integreras med verksamhetssystemet.</p>
-<table>
-<thead>
-<tr>
-<th>System</th>
-<th>Användargrupper</th>
-<th>Inloggningsmetod</th>
-<th>Förvaltare</th>
-<th>Kommentar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>NPÖ</strong> (Nationella Patientöversikten)</td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>SITHS</td>
-<td>Inera</td>
-<td>HSA-katalog, webb</td>
-</tr>
-<tr>
-<td><strong>Pascal</strong> (Läkemedelshantering)</td>
-<td>Sjuksköterskor</td>
-<td>SITHS</td>
-<td>Inera</td>
-<td>HSA-katalog</td>
-</tr>
-<tr>
-<td><strong>Förskrivningskollen</strong></td>
-<td>Sjuksköterskor</td>
-<td>SITHS</td>
-<td>Inera</td>
-<td>Ej responsivt, kräver laptop, ej touch screen</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Regionala system</strong> används för samordning och kvalitetssäkring. Dessa system kräver API-integrationer och stöd för dokumentutbyte.</p>
-<table>
-<thead>
-<tr>
-<th>System</th>
-<th>Användargrupper</th>
-<th>Inloggningsmetod</th>
-<th>Förvaltare</th>
-<th>Kommentar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mina Planer</strong> (Samordnad vårdplan)</td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>SITHS eller Freja eID</td>
-<td>Komin</td>
-<td>Responsivt, webb</td>
-</tr>
-<tr>
-<td><strong>Kvalitetsregister</strong></td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>SITHS</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Lokala system</strong> utgör majoriteten av systemlandskapet. Dessa inkluderar verksamhetssystem, ekonomisystem, HR-system och specialiserade applikationer för olika verksamhetsområden.</p>
-<table>
-<thead>
-<tr>
-<th>System</th>
-<th>Användargrupper</th>
-<th>Inloggningsmetod</th>
-<th>Förvaltare</th>
-<th>Kommentar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>MCSS</strong> (Digital signering)</td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>SITHS eller Freja eID</td>
-<td>Malmö stad</td>
-<td>Avtal går ut 2026-09-01</td>
-</tr>
-<tr>
-<td><strong>Journalföringssystem</strong></td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>SITHS</td>
-<td></td>
-<td>Kommer att bytas</td>
-</tr>
-<tr>
-<td><strong>WebSESAM</strong></td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>Användarnamn + lösenord</td>
-<td></td>
-<td>Responsivt</td>
-</tr>
-<tr>
-<td><strong>Exorlive</strong></td>
-<td>Arbetsterapeuter, Fysioterapeuter</td>
-<td>Användarnamn + lösenord</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Kvalitetsavvikelser</strong> (Selfpoint)</td>
-<td>Sjuksköterskor, Arbetsterapeuter, Fysioterapeuter</td>
-<td>Användarnamn + lösenord</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="inloggningsforfaranden">Inloggningsförfaranden</h2>
-<p>Den nuvarande IT-miljön kräver att användare hanterar flera olika inloggningsmetoder. <strong>SITHS</strong> (Sjukvårdens IT-säkerhet) krävs för vårddata och används i de flesta nationella och regionala system. Idag används SITHS kort som inloggningsmetod, men målet är att använda <strong>SITHS eID</strong> för enklare och säkrare inloggning. <strong>Freja eID</strong> används för vissa system som MCSS och Mina Planer. Många lokala system använder fortfarande <strong>användarnamn + lösenord</strong> med olika krav på komplexitet och uppdateringsfrekvens.</p>
-<h2 id="systemegenskaper">Systemegenskaper</h2>
-<p>Systemen i vår IT-miljö har olika tekniska egenskaper och krav. Vissa system är responsiva och kan användas på olika enheter, medan andra kräver specifika enheter eller konfigurationer. Till exempel kräver <strong>Förskrivningskollen</strong> hög upplösning (1920x1080 pixlar), stor fysisk skärmyta (14") samt mus eller pekplatta, vilket gör det svårt att använda på mobiltelefon eller surfplatta.</p>
-<h2 id="integrationer-och-tekniska-krav">Integrationer och tekniska krav</h2>
-<p>Systemen i vår IT-miljö har olika tekniska krav för integrationer. Nationella system kräver ofta HL7 FHIR-standard och specifika API:er. Regionala system kan ha olika krav på dokumentformat och datautbyte. Lokala system kan ha varierande stöd för API:er och integrationer.</p>
-<h2 id="system-vars-avtal-gar-ut">System vars avtal går ut</h2>
-<p>Flera system i nuvarande systemlandskap har avtal som går ut inom närmaste åren. Detta kan påverka planeringen för ett nytt verksamhetssystem och integrationsmöjligheter.</p>
-<table>
-<thead>
-<tr>
-<th>System</th>
-<th>Leverantör</th>
-<th>Typ</th>
-<th>Avtal går ut</th>
-<th>Kommentar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>iBinder</strong></td>
-<td>iBinder Sverige AB</td>
-<td>Fastighetsprogram</td>
-<td>2025-12-21</td>
-<td>Drift av förvaltningen</td>
-</tr>
-<tr>
-<td><strong>TicTac Learn</strong></td>
-<td>TicTac Learn AB</td>
-<td>E-lärande verktyg</td>
-<td>2026-04-07</td>
-<td>Verktyg för e-lärande</td>
-</tr>
-<tr>
-<td><strong>Optinet</strong></td>
-<td>Optinet Data AB</td>
-<td>Ärendehanteringssystem</td>
-<td>2026-06-10</td>
-<td>Ärendehantering</td>
-</tr>
-<tr>
-<td><strong>TimeZynk</strong></td>
-<td>TimeZynk AB</td>
-<td>Planering och schemaläggning</td>
-<td>2026-07-31</td>
-<td>Planering-, beställnings- och schemaläggningssystem</td>
-</tr>
-<tr>
-<td><strong>MCSS</strong></td>
-<td>Vitec Appva AB</td>
-<td>Digital signering</td>
-<td>2026-09-01</td>
-<td>IT-stöd för administration av omsorgsinsatser</td>
-</tr>
-<tr>
-<td><strong>Inventariesystem</strong></td>
-<td>Secure &amp; Safe TechPrint AB</td>
-<td>Inventariesystem</td>
-<td>2026-09-12</td>
-<td>Inventariehantering</td>
-</tr>
-<tr>
-<td><strong>Procapita/Lifecare</strong></td>
-<td>Tietoevry AB</td>
-<td>Verksamhetssystem</td>
-<td>2028-12-30</td>
-<td>Support och underhåll av Procapita/Lifecare IFO VoO</td>
-</tr>
-</tbody>
-</table>
-<p>System vars avtal går ut inom närmaste åren kan påverka integrationsplaneringen för ett nytt verksamhetssystem.</p>
-<hr/>
-<p><strong>Malmö stad | Hälsa, Vård och Omsorg (HVOF)</strong></p>
+<div id="mkdocs-encrypted-content" style="display:none">yr5dBIvtuFlX7a2/ZNpmEw==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Verksamhetssystem-RFI/system/it-miljo/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["mSxFmt/w71v/SNv/wtG0uA==;Di9NOaFj7bPVtx7t99IXl67YrckgrILP0NNnP//MAmt18KIs3Vh/Bor+oyxeV8VVfD8R0oYs8JuMZg4BsEgVDNwMcElOuobbkgILkKRjEuYDv2VL+BXK7HexB416w4mu;TnxS4wcq0Vv3np0fJDS/YA=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

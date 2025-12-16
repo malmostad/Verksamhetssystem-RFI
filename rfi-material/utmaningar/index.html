@@ -12,7 +12,7 @@
 <link href="../behov-och-fragor/" rel="next"/>
 <link href="../../images/malmo-stad-logo-colour.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
-<title>Utmaningar - RFI - Verksamhetssystemet för HVOF</title>
+<title>[Protected] Utmaningar - RFI - Verksamhetssystemet för HVOF</title>
 <link href="../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -104,7 +104,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Utmaningar
+              [Protected] Utmaningar
             
           </span>
 </div>
@@ -175,7 +175,7 @@
   
     
   
-  Hem
+  [Protected] Hem
 
       </a>
 </li>
@@ -246,7 +246,7 @@
 <span class="md-ellipsis">
     
   
-    Hem
+    [Protected] Hem
   
 
     
@@ -281,7 +281,7 @@
 <span class="md-ellipsis">
     
   
-    Översikt &amp; statistik
+    [Protected] Översikt &amp; statistik
   
 
     
@@ -293,7 +293,7 @@
 <span class="md-ellipsis">
     
   
-    Verksamhetsbeskrivning och vision
+    [Protected] Verksamhetsbeskrivning och vision
   
 
     
@@ -305,7 +305,7 @@
 <span class="md-ellipsis">
     
   
-    Lagkrav vård och omsorg
+    [Protected] Lagkrav vård och omsorg
   
 
     
@@ -343,7 +343,7 @@
 <span class="md-ellipsis">
     
   
-    Översikt
+    [Protected] Översikt
   
 
     
@@ -356,7 +356,7 @@
 <span class="md-ellipsis">
     
   
-    Utmaningar
+    [Protected] Utmaningar
   
 
     
@@ -367,7 +367,7 @@
 <span class="md-ellipsis">
     
   
-    Utmaningar
+    [Protected] Utmaningar
   
 
     
@@ -512,7 +512,7 @@
 <span class="md-ellipsis">
     
   
-    Behov
+    [Protected] Behov
   
 
     
@@ -524,7 +524,7 @@
 <span class="md-ellipsis">
     
   
-    Frågor
+    [Protected] Frågor
   
 
     
@@ -598,7 +598,7 @@
 <span class="md-ellipsis">
     
   
-    Nuvarande verksamhetssystem (Lifecare/Procapita)
+    [Protected] Nuvarande verksamhetssystem (Lifecare/Procapita)
   
 
     
@@ -636,7 +636,7 @@
 <span class="md-ellipsis">
     
   
-    Ordlista
+    [Protected] Ordlista
   
 
     
@@ -648,7 +648,7 @@
 <span class="md-ellipsis">
     
   
-    Arkitekturprinciper
+    [Protected] Arkitekturprinciper
   
 
     
@@ -804,48 +804,31 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="utmaningar-och-scope">Utmaningar och scope</h1>
-<h2 id="malmo-stad-halsa-vard-och-omsorg-hvof">Malmö stad | Hälsa, Vård och Omsorg (HVOF)</h2>
-<h2 id="identifierade-utmaningar">Identifierade utmaningar</h2>
-<p>HVOF står inför flera utmaningar i nuvarande systemlandskap som vi hoppas att ett nytt verksamhetssystem kan adressera. Figuren nedan visar de viktigaste områdena – detaljer följer i efterföljande avsnitt.</p>
-<div class="language-markmap mkdocs-markmap"><markmap-data encoding="base64" hidden="true">LS0tCm1hcmttYXA6CiAgZGlyZWN0aW9uOiAxCi0tLQotIFV0bWFuaW5nYXIKICAtIEZyYWdtZW50ZXJhZCBhcmtpdGVrdHVyCiAgICAtIE3DpW5nYSBzeXN0ZW0KICAgIC0gUHVua3TigJF0aWxs4oCRcHVua3TigJFpbnRlZ3JhdGlvbmVyCiAgLSBTw6RrZXJoZXQKICAgIC0gTcOlbmdhIGlubG9nZ25pbmdhcgogICAgLSBTcGxpdHRyYWQgYmVow7ZyaWdoZXQKICAtIEFuYWx5dGlrCiAgICAtIERhdGEgcMOlIGZsZXJhIHN0w6RsbGVuCiAgICAtIFN2w6VydCBtZWQgaGVsaGV0c2JpbGQKICAtIFV0dmVja2xpbmdzdGFrdAogICAgLSBGbGVyYSBzeXN0ZW0gYXR0IMOkbmRyYQogICAgLSBMw6VuZ3NhbW1hIGxldmVyYW5zZXI=</markmap-data></div>
-<h3 id="fragmenterad-arkitektur">Fragmenterad arkitektur</h3>
-<p>Med 57 system och många punkt‑till‑punkt‑integrationer blir systemlandskapet komplext att underhålla och utveckla. Varje förändring kräver koordinering mellan flera system, vilket förlänger utvecklingstider och ökar risken för fel. Ett mer integrerat system, med central plattform och tydliga integrationsmönster, skulle förenkla både förvaltning och vidareutveckling.</p>
-<h3 id="sakerhetsutmaningar">Säkerhetsutmaningar</h3>
-<p>Många olika inloggningsmetoder och fragmenterad åtkomstkontroll skapar säkerhetsutmaningar och extra administration. Användare behöver hantera flera inloggningar och lösenord, och det blir svårt att införa enhetliga säkerhetspolicyer. Enhetlig autentisering (SSO) och en gemensam behörighetsmodell skulle minska risker och förenkla vardagen för både användare och IT.</p>
-<h3 id="bristande-analytik">Bristande analytik</h3>
-<p>När data är spridd över många system blir det svårt att få en helhetsbild av verksamheten och arbeta datadrivet. Ett nytt verksamhetssystem bör bidra till en sammanhållen datamodell där data kan användas för rapportering, uppföljning och BI/analys utan omfattande manuellt arbete.</p>
-<h3 id="langsam-utveckling">Långsam utveckling</h3>
-<p>Behov av förändringar i verksamheten leder i dag ofta till parallella förändringar i flera system, med lång ledtid och hög testbörda som följd. Ett system med färre beroenden och tydlig livscykelhantering kan korta tiden från behov till levererad funktion och minska kostnaden för förändring.</p>
-<h2 id="konkreta-integrationsutmaningar">Konkreta integrationsutmaningar</h2>
-<p>Baserat på vår nuvarande IT‑miljö ser vi några återkommande integrationsmönster som ett nytt verksamhetssystem måste kunna hantera.</p>
-<pre class="mermaid"><code>flowchart LR
-    A["Användare"] --&gt; B["Verksamhetssystem"]
-    B --&gt; C["Nationella system\n(NPÖ, Pascal, m.fl.)"]
-    B --&gt; D["Regionala system"]
-    B --&gt; E["Lokala system\n(välfärdsteknik, larm, m.m.)"]
-    B --&gt; F["Analys/BI"]</code></pre>
-<h3 id="autentisering-och-identitet">Autentisering och identitet</h3>
-<p>En av de största utmaningarna är att hantera flera autentiseringsmetoder samtidigt. SITHS krävs för de flesta nationella och regionala system, Freja eID används lokalt och många system använder fortfarande användarnamn + lösenord. Detta skapar både supportbörda och säkerhetsrisker. Ett nytt verksamhetssystem bör kunna agera mot en gemensam identitetslösning och erbjuda SSO, så att inloggning och behörighet upplevs som enhetlig.</p>
-<h3 id="tekniska-integrationsmonster">Tekniska integrationsmönster</h3>
-<p>Nationella system kräver ofta HL7 FHIR och väldefinierade API:er, medan regionala och lokala system kan variera i teknik och mognadsgrad. Verksamhetssystemet behöver därför stödja både realtidsintegrationer via API:er och mer traditionella batchflöden, utan att integrationskomplexiteten hamnar hos slutanvändaren.</p>
-<h3 id="dubbeldokumentation">Dubbeldokumentation</h3>
-<p>Idag behöver medarbetare ofta dokumentera samma uppgift i flera system, exempelvis i journal, signeringslösning, patientöversikt och läkemedelssystem. Det skapar merarbete och risk för fel. Ett nytt verksamhetssystem bör samla så mycket som möjligt av dokumentationen i ett gemensamt gränssnitt och minimera antalet separata registreringar.</p>
-<h3 id="systemforvaltning-och-agarskap">Systemförvaltning och ägarskap</h3>
-<p>Att system ägs av olika aktörer (nationellt, regionalt, lokalt) gör ansvar, support och uppdateringar splittrade. Verksamhetssystemet behöver kunna integrera mot system oavsett ägare, med tydliga integrationskontrakt och planering kring versioner och releaser.</p>
-<h3 id="mobil-arbetsplats">Mobil arbetsplats</h3>
-<p>Flera centrala system är inte anpassade för mobil användning, vilket begränsar möjligheterna för personal i fält. Ett nytt verksamhetssystem bör utgå från responsiv design och mobilanpassade arbetsflöden, så att användarna kan utföra sina viktigaste uppgifter även på platta eller telefon.</p>
-<hr/>
-<h2 id="scope">Scope</h2>
-<p>Denna RFI syftar till att förstå er lösning på strategisk nivå. Vi söker information om er arkitektur, kapabilitet och erfarenhet för att bedöma lämpligheten för våra behov.</p>
-<p><strong>Arkitektur och teknik</strong> är centralt. Vi behöver förstå er systemarkitektur, vilka komponenter som ingår, och hur systemet är uppbyggt. Tekniska aspekter som skalbarhet, prestanda och underhållbarhet är viktiga.</p>
-<p><strong>Integrationer</strong> är kritiska för vår verksamhet. Systemet måste kunna integrera med befintliga system via API:er och stödja HL7 FHIR-standard för sjukvårdsdata. Vi behöver förstå er kapabilitet att bygga och underhålla integrationer.</p>
-<p><strong>Erfarenhet från liknande projekt</strong> hjälper oss att bedöma er förmåga att leverera. Vi söker referenser från kommuner eller regioner med liknande verksamhet och systemomfattning.</p>
-<p><strong>Datamigration från befintliga system</strong> är en stor utmaning. Vi behöver förstå er metodik, erfarenhet och kapabilitet att migrera stora datamängder med bibehållen datakvalitet.</p>
-<p><strong>Drift och säkerhet</strong> är avgörande för vår verksamhet. Vi behöver information om certifieringar, datalagring, backup-procedurer och säkerhetsåtgärder. Systemet måste uppfylla GDPR, NIS 2 och andra relevanta lagkrav.</p>
-<p><strong>Indicativ kostnadsnivå</strong> är frivilligt men hjälpsamt för vår budgetplanering. Detta är inte en bindande kostnad utan en indikation på kostnadsnivå.</p>
-<hr/>
-<p><strong>Malmö stad | Hälsa, Vård och Omsorg (HVOF)</strong></p>
+<div id="mkdocs-encrypted-content" style="display:none">4K5UNISF0Af5XKLk4iM0yg==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
+<h1>This content is protected with AES encryption. </h1>
+<p>Contact your administrator for access to this page.</p>
+<input class="md-input" id="mkdocs-content-password" placeholder="Password" type="password"/>
+<p id="mkdocs-decrypt-msg"></p>
+</form>
+</div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Verksamhetssystem-RFI/rfi-material/utmaningar/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["mSxFmt/w71v/SNv/wtG0uA==;Di9NOaFj7bPVtx7t99IXl67YrckgrILP0NNnP//MAmt18KIs3Vh/Bor+oyxeV8VVfD8R0oYs8JuMZg4BsEgVDNwMcElOuobbkgILkKRjEuYDv2VL+BXK7HexB416w4mu;TnxS4wcq0Vv3np0fJDS/YA=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js" type="text/javascript"></script>
+<script defer="" src="../../assets/javascripts/decrypt-contents.js" type="text/javascript"></script>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
